@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package Liga;
+
+import java.util.Date;
+
+/**
+ * @author iam26509397
+ *
+ */
+public class Partido {
+	public int scoreT1 = -1;
+	public int scoreT2 = -1;
+	public String referee;
+	public Date date;
+}
