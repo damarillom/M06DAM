@@ -15,7 +15,7 @@ public class Main {
 	    int swValue;
 	    String path;
 	    //path = Keyin.inString("Inserte la ruta del archivo o directorio: ");
-	    path = ;
+	    path = "";
 	    File file = new File(path);
 	    // Display menu graphics
 	    System.out.println("=====================================================================");

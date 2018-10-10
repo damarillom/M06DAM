@@ -15,7 +15,7 @@ import java.util.Properties;
  * @author iam26509397
  *
  */
-public class prueba {
+public class prueba extends Properties {
 	public static void generarProperties() {
 		Properties prop = new Properties();
 		OutputStream output = null;
@@ -44,6 +44,5 @@ public class prueba {
 
 		}
 	}
-	
 	
 }
