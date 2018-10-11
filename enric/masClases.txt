@@ -1,0 +1,229 @@
+package enric;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+
+
+public class Cosas {
+    private static final short GOL = -1;
+    //    private static final String ARB = "                              ";
+    private static final String ARB = "维维维维维维维维维维维维维维维维维维维维维维维维维维维维维维";
+    //    private static final String ARB = "한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어";
+    private static final int FECHA = 10000101;
+
+//    private static final String FECHA = "10000101";
+//    private static final String FRMT = "uuuuMMdd" ;
+//    private static final DateTimeFormatter DTF = DateTimeFormatter.ofPattern(FRMT); //DateFormatter¿
+//    private static final LocalDate DATE = LocalDate.parse(FECHA,DTF);
+
+    private final static File PATH = new File("data/provalength.bin"); //fichero pasaber cuánto ocupa un partido
+    private final static File PATH2 = new File("data/data.bin");
+
+    public int numTeams;
+
+
+    public Cosas(int teams) throws IOException {
+        //borra el archivo por si hay alguno antiguo
+        System.out.println("deleted?"+ PATH.delete());
+
+        //crear los directorios y el archivo
+        String mkdir = PATH.getParent();
+        System.out.println(new File(mkdir).mkdir());
+        System.out.println(PATH.createNewFile());
+
+        this.numTeams = teams;
+
+        try(RandomAccessFile raf = new RandomAccessFile(PATH,"rw")) {
+            raf.writeShort(GOL);
+            raf.writeShort(GOL);
+            raf.writeUTF(ARB);
+            raf.writeInt(FECHA);
+
+            //            int totalMatches = (teams * teams); //sin la diagonal - teams
+//            System.out.println("total matches: " + totalMatches);
+            //escribir el máximo que puede ocupar un partido
+//            System.out.println("mida partit -> " + PATH.length());
+//            System.out.println("lengthString: "+ARB.length());
+
+        }
+    }
+
+    public boolean prepareFile() throws IOException {
+
+        try (RandomAccessFile raf = new RandomAccessFile(PATH2, "rw")) {
+//            System.out.println(PATH2.delete()); //new league, new file, pa guardar, contador static y nombredearchivo +ese contador
+
+            int jumpToByte = 0;
+            for (int i=1; i<=numTeams; i++) {
+                for (int j=1; j <= numTeams; j++) {
+                    raf.seek(jumpToByte);
+                    raf.writeShort(GOL);
+                    raf.writeShort(GOL); //no son necesarios estos 3¿
+                    raf.writeUTF("");
+                    raf.writeInt(FECHA);
+
+                    jumpToByte += bytesMaxPartit();
+//                    System.out.println("jumptoByte" + jumpToByte);
+                }
+            }
+        }
+        return true;
+    }
+
+    public static long bytesMaxPartit(){
+        return PATH.length();
+    }
+
+
+    public String pruebaPaLeerTodoElArchivo() throws IOException {
+        String res ="";
+        try (RandomAccessFile raf = new RandomAccessFile(PATH2, "r")) {
+            int jumpToByte = 0;
+
+
+            for (int i = 1; i <= numTeams; i++) {
+                for (int j = 1; j <= numTeams; j++) {
+                    //TODO hacer que se imprima como tabla
+
+                    raf.seek(jumpToByte);
+                    if (i==j&& i!=1){ //
+                        res += Short.toString(raf.readShort()) +" "+ Short.toString(raf.readShort()) + "Arb: "+
+                                raf.readUTF() + Integer.toString(raf.readInt()) + "\n";
+                    }
+                    else {
+                        res += Short.toString(raf.readShort()) +" "+ Short.toString(raf.readShort()) + "Arb: "+
+                                raf.readUTF() + Integer.toString(raf.readInt()) + ""; //TODO intTo Fecha
+                    }
+                    jumpToByte+= bytesMaxPartit();
+
+                    //lo mismo pero menos ordenado
+//                    raf.seek(jumpToByte);
+//                    System.out.println(raf.readShort());
+//                    System.out.println(raf.readShort());
+//                    System.out.println(raf.readUTF());
+//                    System.out.println(raf.readInt());
+//                    jumpToByte+=bytesMaxPartit();
+                }
+            }
+        }
+        return res;
+    }
+
+    public int getNumTeams() {
+        return numTeams;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package enric;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class Partit{
+    private final static File PATH = new File("data/data.bin");
+    //la opción 2 del menú llamará a este método
+    short gol1, gol2;
+    String arb;
+    int date, team1,team2, numTeams;
+
+
+    public Partit(short gol1, short gol2, String arb,
+                  int date, int team1, int team2, int numTeams) throws IOException {
+        this.gol1 = gol1;
+        this.gol2 = gol2;
+        this.arb = arb;
+        this.date = date;
+        this.team1 = team1;
+        this.team2 = team2;
+        this.numTeams = numTeams;
+
+        String mkdir = PATH.getParent();
+        new File(mkdir).mkdir();
+        PATH.createNewFile();
+        //ir al sitio del partido y leer el primer gol, si es -1 ok, sino error no se puede introducir porque ya tiene una fecha
+        try (RandomAccessFile raf = new RandomAccessFile(PATH, "r")){
+//            11 12 13 14
+//            21 22 23 24
+//            31 32 33 34
+//            41 42 43 44
+
+//            11 12 13
+//            21 22 23
+//            31 32 33
+
+//            11 12
+//            21 22
+
+            if (this.team1 == this.team2) {
+                System.out.println("la diagonal");
+            }
+            else {
+                int jumpToByte = 0;
+                long max1 = Cosas.bytesMaxPartit();
+
+                for (int i = 1; i <= numTeams; i++) {
+                    for (int j = 1; j <= numTeams; j++) {
+                        raf.seek(jumpToByte);
+                        if (i==this.team1 && j == this.team2){
+
+//                            System.out.println(raf.readShort());
+                            short s = raf.readShort();
+                            //comprobar si no está introducido
+                            if (s == -1){
+                                insertPartit(jumpToByte);
+                                break; //i=numTeams; j=numTeams; ¿ el break es de un for solo? con un boolean se soluciona
+                            }
+                            else{
+                            //TODO decir que ya está introducido
+                                System.out.println("Nope");
+                                break;
+                            }
+
+//                            System.out.println(raf.readShort());
+//                            System.out.println(raf.readUTF());
+//                            System.out.println(raf.readInt());
+
+                        }
+                        jumpToByte+=max1;
+                    }
+                }
+                //TODO Si no ha encontrado ninguno... los teams están mal
+                // o tb antes del bucle, comprobar que teams no es mayor que maxTeams
+            }
+        }
+    }
+
+    public void insertPartit(int toByte) throws IOException {
+        try(RandomAccessFile raf = new RandomAccessFile(PATH,"rw")) {
+            raf.seek(toByte);
+            raf.writeShort(this.gol1); //parece que sobreescribe el -1
+            raf.writeShort(this.gol2);
+            raf.writeUTF(this.arb);
+            raf.writeInt(this.date);
+        }
+
+
+    }
+
+
+}

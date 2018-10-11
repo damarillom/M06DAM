@@ -22,6 +22,7 @@ public class Main extends Properties {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
+		int nEquipos = 10;
 		Properties prop = new Properties();
 	    InputStream is = null;
 	    String pathProp = "C:/Users/danie/Desktop/M06/M06DAM/M6Liga/ES.properties";
@@ -90,7 +91,12 @@ public class Main extends Properties {
 	    	
 		  	break;
 	    case 4:
-	    	
+	    	for (int i = 0; i > nEquipos; i++) {
+	    		for (int j = 0; j > nEquipos; j++) {  
+	    			Partido partido = new Partido();
+	    			
+	            }               
+	        }
 		    break;
 	    default:
 	    	System.out.println("Invalid selection");
