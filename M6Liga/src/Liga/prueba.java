@@ -44,5 +44,9 @@ public class prueba extends Properties {
 
 		}
 	}
+	public static int weightMatch() {
+		
+		return -1;
+	}
 	
 }

@@ -3,9 +3,11 @@
  */
 package Liga;
 
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.text.SimpleDateFormat;
@@ -25,7 +27,8 @@ public class Main extends Properties {
 		int nEquipos = 10;
 		Properties prop = new Properties();
 	    InputStream is = null;
-	    String pathProp = "C:/Users/danie/Desktop/M06/M06DAM/M6Liga/ES.properties";
+	    final String pathArch = "./data/liga.bin";
+	    String pathProp = "./ES.properties";
 	    is = new FileInputStream(pathProp);
 		prop.load(is);
 		//Generamos el archivo properties
@@ -73,9 +76,9 @@ public class Main extends Properties {
 		    InputStream is = null;
 		    String pathProp = "";*/
 		    if (idioma == 1) {
-		    	pathProp = "C:/Users/danie/Desktop/M06/M06DAM/M6Liga/EN.properties";
+		    	pathProp = "./EN.properties";
 		    } else if (idioma == 2) {
-		    	pathProp = "C:/Users/danie/Desktop/M06/M06DAM/M6Liga/ES.properties";
+		    	pathProp = "./ES.properties";
 		    } else {
 		    	System.out.println("Invalid selection");
 		    }
@@ -91,19 +94,32 @@ public class Main extends Properties {
 	    	
 		  	break;
 	    case 4:
-	    	for (int i = 0; i > nEquipos; i++) {
-	    		for (int j = 0; j > nEquipos; j++) {  
-	    			Partido partido = new Partido();
-	    			
-	            }               
-	        }
+	    	try (DataOutputStream out = new DataOutputStream(new FileOutputStream(pathArch))) {
+	    		for (int i = 0; i < nEquipos; i++) {
+	    			for (int j = 0; j < nEquipos; j++) {  
+	    				Partido partido = new Partido();
+	    				out.writeInt(partido.getScoreT1());
+	    				out.writeInt(partido.getScoreT2());
+	    				out.writeUTF(partido.getReferee());
+	    				out.writeInt(partido.getDate());
+	            	}               
+	        	}
+	    		String patrocinador = Keyin.inString(" Insert patrocinador: ");
+	    		String temporada = Keyin.inString(" Insert Temporada: ");
+	    		out.writeUTF(patrocinador);
+	    		out.writeUTF(temporada);	
+	    	} catch (Exception e) {
+				System.out.println(e);
+			}
 		    break;
 	    default:
 	    	System.out.println("Invalid selection");
 	    	break; 
 	    }
 	    System.out.println(prop.getProperty("date"));
+	    prueba.weightMatch();
 	}
+	
 	
 
 }
