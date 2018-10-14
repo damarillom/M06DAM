@@ -21,4 +21,8 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.Properties"/>
 <fullyQualifiedTypeName name="Liga.NProperties"/>
+<fullyQualifiedTypeName name="Liga.Partido"/>
+<fullyQualifiedTypeName name="java.io.RandomAccessFile"/>
+<fullyQualifiedTypeName name="Liga.Keyin"/>
+<fullyQualifiedTypeName name="Liga.prueba"/>
 </qualifiedTypeNameHistroy>

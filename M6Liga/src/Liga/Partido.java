@@ -11,19 +11,28 @@ public class Partido {
     public int scoreT2;
     public String referee;
     public int date;
-    public String eLocal;
-    public String eVisit;
+    public int eLocal;
+    public int eVisit;
     
-    public Partido() {
+    public Partido(int eLocal, int eVisit) {
         this.scoreT1 = -1;
         this.scoreT2 = -1;
-        this.referee = "";
-        this.date = 0;
-        this.eLocal = "";
-        this.eVisit = "";
+        this.referee = "PRUEBA";
+        this.date = 11011990;
+        this.eLocal = eLocal;
+        this.eVisit = eVisit;
     }
     
-    public Partido(int scoreT1, int scoreT2, String referee, int date, String eLocal, String eVisit) {
+    public Partido() {
+    	this.scoreT1 = -1;
+        this.scoreT2 = -1;
+        this.referee = "PRUEBA";
+        this.date = 11011990;
+        this.eLocal = -1;
+        this.eVisit = -1;
+	}
+
+	public Partido(int scoreT1, int scoreT2, String referee, int date, int eLocal, int eVisit) {
         this.scoreT1 = scoreT1;
         this.scoreT2 = scoreT2;
         this.referee = referee;
@@ -32,19 +41,19 @@ public class Partido {
         this.eVisit = eVisit;
     }
 
-    public String geteLocal() {
+    public int geteLocal() {
 		return eLocal;
 	}
 
-	public void seteLocal(String eLocal) {
+	public void seteLocal(int eLocal) {
 		this.eLocal = eLocal;
 	}
 
-	public String geteVisit() {
+	public int geteVisit() {
 		return eVisit;
 	}
 
-	public void seteVisit(String eVisit) {
+	public void seteVisit(int eVisit) {
 		this.eVisit = eVisit;
 	}
 

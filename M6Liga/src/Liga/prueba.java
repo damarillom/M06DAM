@@ -3,11 +3,15 @@
  */
 package Liga;
 
+import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.RandomAccessFile;
 import java.util.Enumeration;
 import java.util.Properties;
 
@@ -16,6 +20,8 @@ import java.util.Properties;
  *
  */
 public class prueba extends Properties {
+	private final static File FILE = new File("./data/partido.bin");
+	//static String pathArch = "./data/partido.bin";
 	public static void generarProperties() {
 		Properties prop = new Properties();
 		OutputStream output = null;
@@ -44,9 +50,25 @@ public class prueba extends Properties {
 
 		}
 	}
-	public static int weightMatch() {
-		
-		return -1;
+	public static long weightMatch() throws FileNotFoundException, IOException {
+		try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
+    	//try (DataOutputStream out = new DataOutputStream(new FileOutputStream(pathArch))) {
+    		
+			Partido partido = new Partido(200, 200, "卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉", 11011999, 1, 2); 
+    		//Partido partido = new Partido(200, 200, "IGNASI", 11011999, 1, 2); 
+
+			raf.writeInt(partido.getScoreT1());
+			raf.writeInt(partido.getScoreT2());
+			raf.writeUTF(partido.getReferee());
+			raf.writeInt(partido.getDate());
+			raf.writeInt(partido.geteLocal());
+			raf.writeInt(partido.geteVisit());
+			
+    	} catch (Exception e) {
+			System.out.println(e);
+		}
+		System.out.println(FILE.length());
+		return FILE.length();
 	}
 	
 }
