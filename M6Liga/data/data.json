@@ -1,4 +1,7 @@
 {
-    "nEquipos": "10"
+    "nEquipos": "10",
+    "maxScore": "200",
+    "minScore": "-1",
+    "refereeLen": "30"
     
 }

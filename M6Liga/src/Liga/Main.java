@@ -49,7 +49,9 @@ public class Main extends Properties {
 	
 	public static void menu() throws IOException {
 		//JSONParser parser = new JSONParser();
-		
+		int maxScore = 0;
+		int minScore = 0;
+		int refereeLen = 0;
 		int nEquipos = 0;
 		JSONParser parser = new JSONParser();
 		 
@@ -58,8 +60,10 @@ public class Main extends Properties {
             Object obj = parser.parse(new FileReader("./data/data.json"));
  
             JSONObject jsonObject = (JSONObject) obj;
- 
             nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+            maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+            minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+            refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
         } catch (Exception e) {
         	System.out.println("Error:" + e);
         }
@@ -168,7 +172,7 @@ public class Main extends Properties {
 		    						date = Keyin.inInt(" date (format DDMMYYYY): ");
 		    						raf.seek(jump);
 		    						try  {
-		    							if (scoreT1 <= 200 && scoreT1 > -1 && scoreT2 <= 200 && scoreT2 > -1 && referee.length() <= 30) {
+		    							if (scoreT1 <= maxScore && scoreT1 > minScore && scoreT2 <= maxScore && scoreT2 > minScore && referee.length() <= refereeLen) {
 		    								raf.writeInt(scoreT1);
 		    								raf.writeInt(scoreT2);
 		    								raf.writeUTF(referee);
