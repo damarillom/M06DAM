@@ -9,13 +9,17 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
 import java.text.SimpleDateFormat;
+import java.util.Locale;
 import java.util.Properties;
 
-
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 /**
  * @author iam26509397
@@ -27,15 +31,38 @@ public class Main extends Properties {
 	 * @throws IOException 
 	 */
 	private final static File FILE = new File("./data/liga.bin");
-	static String pathProp = "./ES.properties";
+	static String pathProp;
 	public static void main(String[] args) throws IOException {
+		
+		String lanSO = Locale.getDefault().toString();
+		if (lanSO.equals("es_ES")) {
+			pathProp = "./ES.properties";
+		} else if (lanSO.equals("en_US")) {
+			pathProp = "./EN.properties";
+		} else {
+			pathProp = "./EN.properties";
+		}
+		//JSONParser parser = new JSONParser();
+		
 		menu();
 	}
 	
 	public static void menu() throws IOException {
 		//JSONParser parser = new JSONParser();
 		
-		int nEquipos = 2;
+		int nEquipos = 0;
+		JSONParser parser = new JSONParser();
+		 
+        try {
+ 
+            Object obj = parser.parse(new FileReader("./data/data.json"));
+ 
+            JSONObject jsonObject = (JSONObject) obj;
+ 
+            nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+        } catch (Exception e) {
+        	System.out.println("Error:" + e);
+        }
 		Properties prop = new Properties();
 	    InputStream is = null;
 	    final String pathArch = "./data/liga.bin";
@@ -154,7 +181,8 @@ public class Main extends Properties {
 										System.out.println("ERROR: " + e);
 									}
 		    						
-		   						break;
+		   						i = nEquipos;
+		   						j = nEquipos;
 		   					} else {
 		    					raf.writeInt(-2);
     							raf.writeInt(-2);
