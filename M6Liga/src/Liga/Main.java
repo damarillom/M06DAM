@@ -133,15 +133,18 @@ public class Main extends Properties {
 	    	long bytePart = prueba.weightMatch();
 	    	long jump2 = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
+	    		System.out.printf("%-10s%-40s%-10s%-10s%-10s\n","Resultado","Arbitro","fecha", "Local", "Visitante");
 	    		for (int i = 0; i < nEquipos; i++) {
 		    		for (int j = 0; j < nEquipos; j++) {
 		    			raf.seek(jump2);
-		    			System.out.println("ScoreT1:" + raf.readInt());
+		    			/**System.out.println("ScoreT1:" + raf.readInt());
 		    			System.out.println("ScoreT2:" + raf.readInt());
 		    			System.out.println("referee:" + raf.readUTF());	
 		    			System.out.println("fecha:" + raf.readInt());
 		    			System.out.println("T1:" + raf.readInt());
-		    			System.out.println("T2:" + raf.readInt() + "\n\n");
+		    			System.out.println("T2:" + raf.readInt() + "\n\n");*/
+		    			
+		    			System.out.printf("%-10s%-40s%-10s%-10s%-10s\n",raf.readInt() +"-"+ raf.readInt(),""+ raf.readUTF(),""+ raf.readInt(), ""+raf.readInt(), ""+raf.readInt());
 		    			
 		    			jump2 += bytePart;
 		    				
@@ -153,37 +156,37 @@ public class Main extends Properties {
 	    	long bitePart = prueba.weightMatch();
 	    	long jump = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
-	    			for (int i = 0; i < nEquipos; i++) {
-		    			for (int j = 0; j < nEquipos; j++) {
-		    				raf.seek(jump);
-		    				int scoreT1 = raf.readInt();
-		    				int scoreT2 = raf.readInt();
-		    				String referee = raf.readUTF();
-		    				int date = raf.readInt();
-		    				int eLocal = raf.readInt();
-		    				int eVisit = raf.readInt();
-		    				if (scoreT1 == -1) {
-		    					System.out.println(eLocal);
-		    					System.out.println(eVisit);
-		    					if (i != j) {
-		   							scoreT1 = Keyin.inInt(" Score team Local: ");
-		   							scoreT2 = Keyin.inInt(" Score visit team: ");
-		   							referee = Keyin.inString(" Introduce Referee: ");
-		    						date = Keyin.inInt(" date (format DDMMYYYY): ");
-		    						raf.seek(jump);
-		    						try  {
-		    							if (scoreT1 <= maxScore && scoreT1 > minScore && scoreT2 <= maxScore && scoreT2 > minScore && referee.length() <= refereeLen) {
-		    								raf.writeInt(scoreT1);
-		    								raf.writeInt(scoreT2);
-		    								raf.writeUTF(referee);
-		    								raf.writeInt(date);
-		    								raf.writeInt(i);
-		    								raf.writeInt(j);
-		    							}
-		    						
-		    						} catch (Exception e) {
-										System.out.println("ERROR: " + e);
-									}
+	    		for (int i = 0; i < nEquipos; i++) {
+		    		for (int j = 0; j < nEquipos; j++) {
+		    			raf.seek(jump);
+		    			int scoreT1 = raf.readInt();
+		   				int scoreT2 = raf.readInt();
+		   				String referee = raf.readUTF();
+	    				int date = raf.readInt();
+	    				int eLocal = raf.readInt();
+		   				int eVisit = raf.readInt();
+		   				if (scoreT1 == -1) {
+		   					System.out.println(eLocal);
+		   					System.out.println(eVisit);
+		    				if (i != j) {
+		   						scoreT1 = Keyin.inInt(" Score team Local: ");
+		   						scoreT2 = Keyin.inInt(" Score visit team: ");
+		   						referee = Keyin.inString(" Introduce Referee: ");
+		    					date = Keyin.inInt(" date (format DDMMYYYY): ");
+		    					raf.seek(jump);
+		    					try  {
+		    						if (scoreT1 <= maxScore && scoreT1 > minScore && scoreT2 <= maxScore && scoreT2 > minScore && referee.length() <= refereeLen) {
+		   								raf.writeInt(scoreT1);
+		   								raf.writeInt(scoreT2);
+		   								raf.writeUTF(referee);
+		   								raf.writeInt(date);
+		    							raf.writeInt(i);
+		    							raf.writeInt(j);
+		    						}
+		    					
+		    					} catch (Exception e) {
+									System.out.println("ERROR: " + e);
+								}
 		    						
 		   						i = nEquipos;
 		   						j = nEquipos;
