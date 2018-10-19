@@ -243,3 +243,7 @@ public class Main extends Properties {
 	
 
 }
+//COPIA SEGURIDAD DE LA CARPERTA DATA CON OTRO NOMBRE 
+//archivo de configuracion language activo  i liga activa
+//metodo modificar json
+//metodo resetear liga.bin
