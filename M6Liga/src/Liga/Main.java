@@ -270,6 +270,36 @@ public class Main extends Properties {
 		    break;
 	    case 5:
 	    	//prueba.copiaSeguridad();
+	    	try {
+            	Object obj = parser.parse(new FileReader("./data/data.json"));
+            	
+                JSONObject jsonObject = (JSONObject) obj;
+                //nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+                //maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+                nEquipos = Keyin.inInt(" Total of teams: ");
+                maxScore = Keyin.inInt(" Max Score of a team: ");
+                minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+                refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+            	
+            	JSONObject newObj = new JSONObject();
+        		newObj.put("nEquipos", nEquipos+"");
+        		newObj.put("maxScore", maxScore+"");
+        		newObj.put("minScore", minScore+"");
+        		newObj.put("refereeLen", refereeLen+"");
+        		
+        		String ruta = "./data/data.json";
+        		File archivo = new File(ruta);
+        		BufferedWriter bw;
+        		try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+        			fileJson.write(newObj.toJSONString());
+        			System.out.println("Successfully Copied JSON Object to File...");
+        			System.out.println("\nJSON Object: " + obj);
+        		}
+            } catch (Exception e) {
+            	System.out.println("Error:" + e);
+            }
+	    	
+	    	
 	    	break;
 	    default:
 	    	System.out.println("Invalid selection");
