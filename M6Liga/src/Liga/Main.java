@@ -35,7 +35,7 @@ public class Main extends Properties {
 	private final static File FILE = new File("./data/liga.bin");
 	static String pathProp;
 	public static void main(String[] args) throws IOException {
-		
+		//Escoge el idioma del SO
 		String lanSO = Locale.getDefault().toString();
 		if (lanSO.equals("es_ES")) {
 			pathProp = "./ES.properties";
@@ -106,12 +106,14 @@ public class Main extends Properties {
 	    System.out.println("|        2. "+prop.getProperty("see")+"  						");
 	    System.out.println("|        3. "+prop.getProperty("intro")+"			        ");
 	    System.out.println("|        4. "+prop.getProperty("reboot")+"					        ");
+	    System.out.println("|        5. "+prop.getProperty("exit")+"					        ");
 	    System.out.println("=====================================================================");
 	    swValue = Keyin.inInt(" Select option: ");
 	    // Switch construct
 	    switch (swValue) {
 	    case 1:
 	    	int idioma;
+	    	//Menu idiomas
 	    	System.out.println("| Options:         	 ");
 		    System.out.println("|        1. English  ");
 		    System.out.println("|        2. Spanish  ");
@@ -119,6 +121,8 @@ public class Main extends Properties {
 		    /**Properties prop = new Properties();
 		    InputStream is = null;
 		    String pathProp = "";*/
+		    
+		    //Elige el properties a usar
 		    if (idioma == 1) {
 		    	pathProp = "./EN.properties";
 		    } else if (idioma == 2) {
@@ -126,7 +130,9 @@ public class Main extends Properties {
 		    } else {
 		    	System.out.println("Invalid selection");
 		    }
-	    	System.out.println(pathProp);
+		    
+		    //Carga los properties elegidos
+	    	//System.out.println(pathProp);
 	    	is = new FileInputStream(pathProp);
 			prop.load(is);
 	    	//System.out.println(prop.getProperty("team"));
@@ -135,7 +141,9 @@ public class Main extends Properties {
 	    	long bytePart = prueba.weightMatch();
 	    	long jump2 = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
+	    		//Pone los encabezados de la tabla
 	    		System.out.printf("%-10s%-40s%-10s%-10s%-10s\n","Resultado","Arbitro","fecha", "Local", "Visitante");
+	    		//Añade los partidos a la tabla
 	    		for (int i = 0; i < nEquipos; i++) {
 		    		for (int j = 0; j < nEquipos; j++) {
 		    			raf.seek(jump2);
@@ -149,7 +157,6 @@ public class Main extends Properties {
 		    			System.out.printf("%-10s%-40s%-10s%-10s%-10s\n",raf.readInt() +"-"+ raf.readInt(),""+ raf.readUTF(),""+ raf.readInt(), ""+raf.readInt(), ""+raf.readInt());
 		    			
 		    			jump2 += bytePart;
-		    				
 		    		}
 	    		}
 	    	}
@@ -158,6 +165,7 @@ public class Main extends Properties {
 	    	long bitePart = prueba.weightMatch();
 	    	long jump = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
+	    		//Recorremos todos los partidos
 	    		for (int i = 0; i < nEquipos; i++) {
 		    		for (int j = 0; j < nEquipos; j++) {
 		    			raf.seek(jump);
@@ -167,9 +175,12 @@ public class Main extends Properties {
 	    				int date = raf.readInt();
 	    				int eLocal = raf.readInt();
 		   				int eVisit = raf.readInt();
+		   				//Comprobamos que no se haya jugado
 		   				if (scoreT1 == -1) {
-		   					System.out.println(eLocal);
-		   					System.out.println(eVisit);
+		   					//System.out.println(eLocal);
+		   					//System.out.println(eVisit);
+		   					
+		   					//y que no sea un partido entre el mismo equipo 2 veces
 		    				if (i != j) {
 		   						scoreT1 = Keyin.inInt(" Score team Local: ");
 		   						scoreT2 = Keyin.inInt(" Score visit team: ");
@@ -208,7 +219,45 @@ public class Main extends Properties {
 	    	}
 		  	break;
 	    case 4:
+	    	//Hace una copia de seguridad
 	    	prueba.copiaSeguridad();
+	    	
+	    	//modifica el json con los valores que pide al usuario
+	    	try {
+            	Object obj = parser.parse(new FileReader("./data/data.json"));
+            	
+                JSONObject jsonObject = (JSONObject) obj;
+                nEquipos = Keyin.inInt(" Total of teams: ");
+                maxScore = Keyin.inInt(" Max Score of a team: ");
+                minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+                refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+                String patrocinador = Keyin.inString(" Insert patrocinador: ");
+	    		String temporada = Keyin.inString(" Insert Temporada: ");
+            	
+            	JSONObject newObj = new JSONObject();
+        		newObj.put("nEquipos", nEquipos+"");
+        		newObj.put("maxScore", maxScore+"");
+        		newObj.put("minScore", minScore+"");
+        		newObj.put("refereeLen", refereeLen+"");
+        		newObj.put("patrocinador", patrocinador);
+        		newObj.put("temporada", temporada);
+        		
+        		String ruta = "./data/data.json";
+        		File archivo = new File(ruta);
+        		BufferedWriter bw;
+        		try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+        			fileJson.write(newObj.toJSONString());
+        			//System.out.println("Successfully Copied JSON Object to File...");
+        			//System.out.println("\nJSON Object: " + obj);
+        		}
+            } catch (Exception e) {
+            	System.out.println("Error:" + e);
+            }
+	    	
+	    	//hace que liga.bin este vacio
+	    	prueba.borrarArchivo();
+	    	
+	    	//Rellena liga.bin con los partidos con valores por defecto usados para los partidos no jugados
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
 	    		long jumpC = 0;
 	    		long byteToC = prueba.weightMatch();
@@ -228,40 +277,10 @@ public class Main extends Properties {
 	            	}               
 	        	}
 	    		
-	    		String patrocinador = Keyin.inString(" Insert patrocinador: ");
-	    		String temporada = Keyin.inString(" Insert Temporada: ");
+	    		//String patrocinador = Keyin.inString(" Insert patrocinador: ");
+	    		//String temporada = Keyin.inString(" Insert Temporada: ");
 	    		//raf.writeUTF(patrocinador);
 	    		//raf.writeUTF(temporada);	
-	    		
-	    		//JSONParser parser = new JSONParser();
-	            try {
-	            	Object obj = parser.parse(new FileReader("./data/data.json"));
-	            	 
-	                JSONObject jsonObject = (JSONObject) obj;
-	                nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
-	                maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
-	                minScore = Integer.parseInt((String) jsonObject.get("minScore"));
-	                refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
-	            	
-	            	JSONObject newObj = new JSONObject();
-	        		newObj.put("nEquipos", nEquipos+"");
-	        		newObj.put("maxScore", maxScore+"");
-	        		newObj.put("minScore", minScore+"");
-	        		newObj.put("refereeLen", refereeLen+"");
-	        		newObj.put("patrocinador", patrocinador);
-	        		newObj.put("temporada", temporada);
-	        		
-	        		String ruta = "./data/data.json";
-	        		File archivo = new File(ruta);
-	        		BufferedWriter bw;
-	        		try (FileWriter fileJson = new FileWriter("./data/data.json")) {
-	        			fileJson.write(newObj.toJSONString());
-	        			System.out.println("Successfully Copied JSON Object to File...");
-	        			System.out.println("\nJSON Object: " + obj);
-	        		}
-	            } catch (Exception e) {
-	            	System.out.println("Error:" + e);
-	            }
 	    		
 	    		
 	    	} catch (Exception e) {
@@ -269,37 +288,7 @@ public class Main extends Properties {
 			}
 		    break;
 	    case 5:
-	    	//prueba.copiaSeguridad();
-	    	try {
-            	Object obj = parser.parse(new FileReader("./data/data.json"));
-            	
-                JSONObject jsonObject = (JSONObject) obj;
-                //nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
-                //maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
-                nEquipos = Keyin.inInt(" Total of teams: ");
-                maxScore = Keyin.inInt(" Max Score of a team: ");
-                minScore = Integer.parseInt((String) jsonObject.get("minScore"));
-                refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
-            	
-            	JSONObject newObj = new JSONObject();
-        		newObj.put("nEquipos", nEquipos+"");
-        		newObj.put("maxScore", maxScore+"");
-        		newObj.put("minScore", minScore+"");
-        		newObj.put("refereeLen", refereeLen+"");
-        		
-        		String ruta = "./data/data.json";
-        		File archivo = new File(ruta);
-        		BufferedWriter bw;
-        		try (FileWriter fileJson = new FileWriter("./data/data.json")) {
-        			fileJson.write(newObj.toJSONString());
-        			System.out.println("Successfully Copied JSON Object to File...");
-        			System.out.println("\nJSON Object: " + obj);
-        		}
-            } catch (Exception e) {
-            	System.out.println("Error:" + e);
-            }
-	    	
-	    	
+		    System.exit(0);
 	    	break;
 	    default:
 	    	System.out.println("Invalid selection");
@@ -312,7 +301,7 @@ public class Main extends Properties {
 
 }
 //COPIA SEGURIDAD DE LA CARPERTA DATA CON OTRO NOMBRE --- DO
-//archivo de configuracion language activo  
+//archivo de configuracion language activo -- NO TIENE SENTIDO  
 //i liga activa -- DO
-//metodo modificar json
+//metodo modificar json -- DO
 //metodo resetear liga.bin --DO
