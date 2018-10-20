@@ -8,12 +8,17 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.util.Enumeration;
 import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 /**
  * @author iam26509397
@@ -69,6 +74,25 @@ public class prueba extends Properties {
 		}
 		System.out.println(FILE.length());
 		return FILE.length();
+	}
+	public static void copiaSeguridad() throws IOException {
+		JSONParser parser = new JSONParser();
+		String directory = "";
+        try {
+ 
+            Object obj = parser.parse(new FileReader("./data/data.json"));
+ 
+            JSONObject jsonObject = (JSONObject) obj;
+            directory = (String) jsonObject.get("patrocinador");
+            directory += (String) jsonObject.get("temporada");
+        } catch (Exception e) {
+        	System.out.println("Error:" + e);
+        }
+		new File("./copiaSeguridad/"+directory).mkdir();
+		File sourceLocation= new File("./data");
+        File targetLocation = new File("./copiaSeguridad/"+directory);
+        FileUtils.copyDirectory(sourceLocation, targetLocation);
+
 	}
 	
 }

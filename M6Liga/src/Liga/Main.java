@@ -3,6 +3,7 @@
  */
 package Liga;
 
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -10,6 +11,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.RandomAccessFile;
@@ -206,6 +208,7 @@ public class Main extends Properties {
 	    	}
 		  	break;
 	    case 4:
+	    	prueba.copiaSeguridad();
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
 	    		long jumpC = 0;
 	    		long byteToC = prueba.weightMatch();
@@ -227,12 +230,47 @@ public class Main extends Properties {
 	    		
 	    		String patrocinador = Keyin.inString(" Insert patrocinador: ");
 	    		String temporada = Keyin.inString(" Insert Temporada: ");
-	    		raf.writeUTF(patrocinador);
-	    		raf.writeUTF(temporada);	
+	    		//raf.writeUTF(patrocinador);
+	    		//raf.writeUTF(temporada);	
+	    		
+	    		//JSONParser parser = new JSONParser();
+	            try {
+	            	Object obj = parser.parse(new FileReader("./data/data.json"));
+	            	 
+	                JSONObject jsonObject = (JSONObject) obj;
+	                nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+	                maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+	                minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+	                refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+	            	
+	            	JSONObject newObj = new JSONObject();
+	        		newObj.put("nEquipos", nEquipos+"");
+	        		newObj.put("maxScore", maxScore+"");
+	        		newObj.put("minScore", minScore+"");
+	        		newObj.put("refereeLen", refereeLen+"");
+	        		newObj.put("patrocinador", patrocinador);
+	        		newObj.put("temporada", temporada);
+	        		
+	        		String ruta = "./data/data.json";
+	        		File archivo = new File(ruta);
+	        		BufferedWriter bw;
+	        		try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+	        			fileJson.write(newObj.toJSONString());
+	        			System.out.println("Successfully Copied JSON Object to File...");
+	        			System.out.println("\nJSON Object: " + obj);
+	        		}
+	            } catch (Exception e) {
+	            	System.out.println("Error:" + e);
+	            }
+	    		
+	    		
 	    	} catch (Exception e) {
 				System.out.println(e);
 			}
 		    break;
+	    case 5:
+	    	//prueba.copiaSeguridad();
+	    	break;
 	    default:
 	    	System.out.println("Invalid selection");
 	    	break; 
@@ -243,7 +281,8 @@ public class Main extends Properties {
 	
 
 }
-//COPIA SEGURIDAD DE LA CARPERTA DATA CON OTRO NOMBRE 
-//archivo de configuracion language activo  i liga activa
+//COPIA SEGURIDAD DE LA CARPERTA DATA CON OTRO NOMBRE --- DO
+//archivo de configuracion language activo  
+//i liga activa -- DO
 //metodo modificar json
-//metodo resetear liga.bin
+//metodo resetear liga.bin --DO

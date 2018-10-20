@@ -1,7 +1,1 @@
-{
-    "nEquipos": "10",
-    "maxScore": "200",
-    "minScore": "-1",
-    "refereeLen": "30"
-    
-}
+{"nEquipos":"10","minScore":"-1","temporada":"10Equipos","patrocinador":"liga","maxScore":"200","refereeLen":"30"}
