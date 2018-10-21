@@ -30,4 +30,5 @@
 <fullyQualifiedTypeName name="org.apache.commons.io.FileUtils"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
+<fullyQualifiedTypeName name="bibliotecas.BibliotecasReader"/>
 </qualifiedTypeNameHistroy>

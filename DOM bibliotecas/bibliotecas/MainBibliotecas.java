@@ -41,7 +41,10 @@ public class MainBibliotecas {
 		String telf="944 672 946";
 		System.out.println("Id para telefono "+telf);
 		System.out.println("\t"+r.idPorTelefono(telf));
-
+		System.out.println();
+		
+		/**System.out.println("prueba");
+		r.prueba(cp);*/
 
 	}
 

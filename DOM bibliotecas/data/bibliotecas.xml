@@ -1,0 +1,32 @@
+<bookstore>
+	<row num="1">
+		<librarycp>48451</librarycp>
+		<libraryemail>email@email.es</libraryemail>
+		<libraryphone>944 672 946</libraryphone>
+	</row>
+	<row num="2">
+		<librarycp>48452</librarycp>
+		<libraryemail></libraryemail>
+		<libraryphone>944 672 946</libraryphone>
+	</row>
+	<row num="3">
+		<librarycp>48450</librarycp>
+		<libraryemail>email1@email.es</libraryemail>
+		<libraryphone>944 672 946</libraryphone>
+	</row>
+	<row num="4">
+		<librarycp>48454</librarycp>
+		<libraryemail>email2@email.es</libraryemail>
+		<libraryphone>944 672 946</libraryphone>
+	</row>
+	<row num="5">
+		<librarycp>48450</librarycp>
+		<libraryemail>email3@email.es</libraryemail>
+		<libraryphone>944 672 946</libraryphone>
+	</row>
+	<row num="6">
+		<librarycp>48456</librarycp>
+		<libraryemail>email4@email.es</libraryemail>
+		<libraryphone>999 672 946</libraryphone>
+	</row>
+</bookstore>

@@ -40,6 +40,10 @@ public class BibliotecasReader extends DomReader {
 		return(super.extractValue("//row[libraryphone='"+telf+"']/@num"));
 	}
 	
+	/**public void prueba(String cp) {
+		List<String> lista = super.extractList("//row[librarycp="+cp+"]/libraryemail/text()");
+		super.print(lista);
+	}*/
 	
 	
 	
