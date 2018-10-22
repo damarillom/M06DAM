@@ -10,7 +10,9 @@ public class Partido {
     public int scoreT1;
     public int scoreT2;
     public String referee;
-    public int date;
+    public int day;
+    public int month;
+    public int year;
     public int eLocal;
     public int eVisit;
     
@@ -18,7 +20,9 @@ public class Partido {
         this.scoreT1 = -1;
         this.scoreT2 = -1;
         this.referee = "PRUEBA";
-        this.date = 11011990;
+        this.day = 1;
+        this.month = 1;
+        this.year = 2000;
         this.eLocal = eLocal;
         this.eVisit = eVisit;
     }
@@ -27,16 +31,20 @@ public class Partido {
     	this.scoreT1 = -1;
         this.scoreT2 = -1;
         this.referee = "PRUEBA";
-        this.date = 11011990;
+        this.day = 1;
+        this.month = 1;
+        this.year = 2000;
         this.eLocal = -1;
         this.eVisit = -1;
 	}
 
-	public Partido(int scoreT1, int scoreT2, String referee, int date, int eLocal, int eVisit) {
+	public Partido(int scoreT1, int scoreT2, String referee, int day, int month, int year, int eLocal, int eVisit) {
         this.scoreT1 = scoreT1;
         this.scoreT2 = scoreT2;
         this.referee = referee;
-        this.date = date;
+        this.day = day;
+        this.month = month;
+        this.year = year;
         this.eLocal = eLocal;
         this.eVisit = eVisit;
     }
@@ -81,13 +89,31 @@ public class Partido {
         this.referee = referee;
     }
 
-    public int getDate() {
-        return date;
-    }
+	public int getDay() {
+		return day;
+	}
 
-    public void setDate(int date) {
-        this.date = date;
-    }
+	public void setDay(int day) {
+		this.day = day;
+	}
+
+	public int getMonth() {
+		return month;
+	}
+
+	public void setMonth(int month) {
+		this.month = month;
+	}
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+    
     
     
 }

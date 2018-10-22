@@ -63,13 +63,15 @@ public class prueba extends Properties {
 		try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
     	//try (DataOutputStream out = new DataOutputStream(new FileOutputStream(pathArch))) {
     		
-			Partido partido = new Partido(200, 200, "卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉", 11011999, 1, 2); 
+			Partido partido = new Partido(200, 200, "卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉科特卡拉", 11, 11, 2000, 1, 2); 
     		//Partido partido = new Partido(200, 200, "IGNASI", 11011999, 1, 2); 
 
 			raf.writeInt(partido.getScoreT1());
 			raf.writeInt(partido.getScoreT2());
 			raf.writeUTF(partido.getReferee());
-			raf.writeInt(partido.getDate());
+			raf.writeInt(partido.getDay());
+			raf.writeInt(partido.getMonth());
+			raf.writeInt(partido.getYear());
 			raf.writeInt(partido.geteLocal());
 			raf.writeInt(partido.geteVisit());
 			
@@ -77,7 +79,7 @@ public class prueba extends Properties {
 			System.out.println(e);
 		}
 		//System.out.println(FILE.length());
-		return FILE.length();
+		return FILE.length() + 2;
 	}
 	public static void copiaSeguridad() throws IOException {
 		JSONParser parser = new JSONParser();

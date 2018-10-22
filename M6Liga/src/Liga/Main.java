@@ -154,7 +154,7 @@ public class Main extends Properties {
 		    			System.out.println("T1:" + raf.readInt());
 		    			System.out.println("T2:" + raf.readInt() + "\n\n");*/
 		    			
-		    			System.out.printf("%-10s%-40s%-10s%-10s%-10s\n",raf.readInt() +"-"+ raf.readInt(),""+ raf.readUTF(),""+ raf.readInt(), ""+raf.readInt(), ""+raf.readInt());
+		    			System.out.printf("%-10s%-40s%-10s%-10s%-10s\n",raf.readInt() +"-"+ raf.readInt(),""+ raf.readUTF(),raf.readInt() + "-" + raf.readInt() + "-" + raf.readInt(), ""+raf.readInt(), ""+raf.readInt());
 		    			
 		    			jump2 += bytePart;
 		    		}
@@ -172,7 +172,9 @@ public class Main extends Properties {
 		    			int scoreT1 = raf.readInt();
 		   				int scoreT2 = raf.readInt();
 		   				String referee = raf.readUTF();
-	    				int date = raf.readInt();
+	    				int day = raf.readInt();
+	    				int month = raf.readInt();
+	    				int year = raf.readInt();
 	    				int eLocal = raf.readInt();
 		   				int eVisit = raf.readInt();
 		   				//Comprobamos que no se haya jugado
@@ -185,14 +187,18 @@ public class Main extends Properties {
 		   						scoreT1 = Keyin.inInt(" Score team Local: ");
 		   						scoreT2 = Keyin.inInt(" Score visit team: ");
 		   						referee = Keyin.inString(" Introduce Referee: ");
-		    					date = Keyin.inInt(" date (format DDMMYYYY): ");
+		    					day = Keyin.inInt(" day: ");
+		    					month = Keyin.inInt(" month (numeric): ");
+		    					year = Keyin.inInt(" year: ");
 		    					raf.seek(jump);
 		    					try  {
 		    						if (scoreT1 <= maxScore && scoreT1 > minScore && scoreT2 <= maxScore && scoreT2 > minScore && referee.length() <= refereeLen) {
 		   								raf.writeInt(scoreT1);
 		   								raf.writeInt(scoreT2);
 		   								raf.writeUTF(referee);
-		   								raf.writeInt(date);
+		   								raf.writeInt(day);
+		   								raf.writeInt(month);
+		   								raf.writeInt(year);
 		    							raf.writeInt(i);
 		    							raf.writeInt(j);
 		    						}
@@ -268,11 +274,13 @@ public class Main extends Properties {
 	    				raf.writeInt(partido.getScoreT1());
 	    				raf.writeInt(partido.getScoreT2());
 	    				raf.writeUTF(partido.getReferee());
-	    				raf.writeInt(partido.getDate());
+	    				raf.writeInt(partido.getDay());
+	    				raf.writeInt(partido.getMonth());
+	    				raf.writeInt(partido.getYear());
 	    				raf.writeInt(partido.geteLocal());
 	    				raf.writeInt(partido.geteVisit());
 	    				
-	    				System.out.println(partido.getDate()+"-"+partido.geteLocal() +"-"+partido.geteVisit() );
+	    				//System.out.println(partido.getDate()+"-"+partido.geteLocal() +"-"+partido.geteVisit() );
 	    				jumpC += byteToC;
 	            	}               
 	        	}
