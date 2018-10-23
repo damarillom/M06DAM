@@ -209,14 +209,6 @@ public class Main extends Properties {
 		    						
 		   						i = nEquipos;
 		   						j = nEquipos;
-		   					} else {
-		    					raf.writeInt(-2);
-    							raf.writeInt(-2);
-    							raf.writeUTF("NO");
-    							raf.writeInt(99999999);
-    							raf.writeInt(i);
-    							raf.writeInt(j);
-    							
 		   					}
 		   				}
 		   				jump += bitePart;

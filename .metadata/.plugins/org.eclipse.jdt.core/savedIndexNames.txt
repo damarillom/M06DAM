@@ -13,7 +13,6 @@ INDEX VERSION 1.130+C:\Users\danie\Desktop\M06\M06DAM\.metadata\.plugins\org.ecl
 1058325852.index
 2511617568.index
 1537661619.index
-1651749805.index
 984225034.index
 1455593261.index
 2773834657.index
