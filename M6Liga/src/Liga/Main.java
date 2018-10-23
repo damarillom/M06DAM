@@ -27,7 +27,7 @@ import org.json.simple.parser.JSONParser;
  * @author iam26509397
  *
  */
-public class Main extends Properties {
+public class Main {
 	/**
 	 * @param args
 	 * @throws IOException 
@@ -138,12 +138,12 @@ public class Main extends Properties {
 	    	//System.out.println(prop.getProperty("team"));
 	      	break;
 	    case 2:
-	    	long bytePart = prueba.weightMatch();
+	    	long bytePart = Prueba.weightMatch();
 	    	long jump2 = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
 	    		//Pone los encabezados de la tabla
 	    		System.out.printf("%-10s%-40s%-10s%-10s%-10s\n","Resultado","Arbitro","fecha", "Local", "Visitante");
-	    		//Añade los partidos a la tabla
+	    		//Aï¿½ade los partidos a la tabla
 	    		for (int i = 0; i < nEquipos; i++) {
 		    		for (int j = 0; j < nEquipos; j++) {
 		    			raf.seek(jump2);
@@ -162,7 +162,7 @@ public class Main extends Properties {
 	    	}
 	      	break;
 	    case 3:
-	    	long bitePart = prueba.weightMatch();
+	    	long bitePart = Prueba.weightMatch();
 	    	long jump = 0;
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
 	    		//Recorremos todos los partidos
@@ -218,7 +218,7 @@ public class Main extends Properties {
 		  	break;
 	    case 4:
 	    	//Hace una copia de seguridad
-	    	prueba.copiaSeguridad();
+	    	Prueba.copiaSeguridad();
 	    	
 	    	//modifica el json con los valores que pide al usuario
 	    	try {
@@ -253,12 +253,12 @@ public class Main extends Properties {
             }
 	    	
 	    	//hace que liga.bin este vacio
-	    	prueba.borrarArchivo();
+	    	Prueba.borrarArchivo();
 	    	
 	    	//Rellena liga.bin con los partidos con valores por defecto usados para los partidos no jugados
 	    	try (RandomAccessFile raf = new RandomAccessFile(FILE, "rw")){
 	    		long jumpC = 0;
-	    		long byteToC = prueba.weightMatch();
+	    		long byteToC = Prueba.weightMatch();
 	    		for (int i = 0; i < nEquipos; i++) {
 	    			for (int j = 0; j < nEquipos; j++) { 
 	    				raf.seek(jumpC);

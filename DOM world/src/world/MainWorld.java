@@ -24,13 +24,35 @@ public class MainWorld {
 	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 		
 		WorldReader r = new WorldReader("data/world.xml");
-		String año="1970";
-		String minPop = "1214489";
-		System.out.println("listarPaisesPorPoblacionEnXAño="+año);
-		for(String s:r.listarPaisesPorLaPoblacionEnXAñoMayorAY(año,minPop)){
+		String aÃ±o="2010";
+		String minPop = "2900139";
+		String maxPop = "3900138";
+		System.out.println("listarPaisesPorPoblacionEnXAÃ±o="+aÃ±o);
+		for(String s:r.listarPaisesPorLaPoblacionEnXAÃ±oMayorAY(aÃ±o,minPop, maxPop)){
 			System.out.println("\t"+s);
 		}
 		System.out.println();
+		
+		System.out.println("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////");
+		int gdp = 12700;
+		for(String s:r.gdp(gdp)){
+			System.out.println("\t"+s);
+		}
+		
+		System.out.println();
+		
+		System.out.println("----------------------------------------------------------------------------------------------------------------------");
+		String border = "AL";
+		for(String s:r.border(border)){
+			System.out.println("\t"+s);
+		}
+		System.out.println();
+		
+		System.out.println("***************************************************************************************************************");
+		int year2 = 2012;
+		for(String s:r.population(year2)){
+			System.out.println("\t"+s);
+		}
 	}
 
 }

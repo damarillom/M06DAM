@@ -26,7 +26,7 @@ import org.json.simple.parser.JSONParser;
  * @author iam26509397
  *
  */
-public class prueba extends Properties {
+public class Prueba {
 	private final static File FILE = new File("./data/partido.bin");
 	//static String pathArch = "./data/partido.bin";
 	public static void generarProperties() {
