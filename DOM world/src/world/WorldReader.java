@@ -20,7 +20,7 @@ public class WorldReader extends DomReader {
 		super(xml);
 	}
 	
-	public List<String> listarPaisesPorLaPoblacionEnXAñoMayorAY(String year, String minPop, String maxPop){
+	public List<String> listarPaisesPorLaPoblacionEnXAnoMayorAY(String year, String minPop, String maxPop){
 		//return(super.extractList("world/country[population/@year>="+year+"][population>="+minPop+"] | world/country[population/@year>=\"+year+\"][population>="+maxPop+"]/@car_code"));
 		 return ( super.extractList( "/world/country[population>"+minPop+" and population<"+maxPop+"]" +
 		           "/population[@year>="+year+"]/../@car_code" ) );
@@ -46,4 +46,10 @@ public class WorldReader extends DomReader {
 		 return super.extractList("//country/population[@year >="+year+"]/../name/text()");
 	}
 	
+	public String getCountryByCity(String city) {
+		//Para Albania
+		//return super.extractValue("/world/country/city/name[text()='"+city+"']/../../@car_code");
+		//paises con provincia
+		return super.extractValue("world/country/province/city/name[text()='"+city+"']/../../../name/text()");
+	}
 }

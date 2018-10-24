@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;path&apos; in &apos;ExercisisM61.Exe4&apos; to &apos;PATH&apos;&#x0A;- Original project: &apos;ExercisisM6-1&apos;&#x0A;- Original element: &apos;ExercisisM61.Exe4.path&apos;&#x0A;- Renamed element: &apos;ExercisisM61.Exe4.PATH&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;path&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;ExercisisM61{Exe4.java[Exe4^path" name="PATH" references="true" setter="false" stamp="1538147714290" textual="false" version="1.0"/>
-</session>

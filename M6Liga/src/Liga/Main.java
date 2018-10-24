@@ -35,15 +35,75 @@ public class Main {
 	private final static File FILE = new File("./data/liga.bin");
 	static String pathProp;
 	public static void main(String[] args) throws IOException {
+		int maxScore = 0;
+		int minScore = 0;
+		int refereeLen = 0;
+		int nEquipos = 0;
+		String lan = "";
+		JSONParser parser = new JSONParser();
+		try {
+	    	Object obj = parser.parse(new FileReader("./data/data.json"));
+	    	
+	        JSONObject jsonObject = (JSONObject) obj;
+	        nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+	        maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+	        minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+	        refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+	        String patrocinador = (String) jsonObject.get("patrocinador");
+			String temporada = (String) jsonObject.get("temporada");
+			lan = (String) jsonObject.get("lan");
+	    	
+			if (lan.equals("ES")) {
+				pathProp = "./ES.properties";
+			} else if (lan.equals("EN")) {
+				pathProp = "./EN.properties";
+			} else {
+				String lanSO = Locale.getDefault().toString();
+				if (lanSO.equals("es_ES")) {
+					lan = "ES";
+					pathProp = "./ES.properties";
+				} else if (lanSO.equals("en_US")) {
+					lan = "EN";
+					pathProp = "./EN.properties";
+				} else {
+					lan = "EN";
+					pathProp = "./EN.properties";
+				}
+			}    		
+			
+	    	JSONObject newObj = new JSONObject();
+			newObj.put("nEquipos", nEquipos+"");
+			newObj.put("maxScore", maxScore+"");
+			newObj.put("minScore", minScore+"");
+			newObj.put("refereeLen", refereeLen+"");
+			newObj.put("patrocinador", patrocinador);
+			newObj.put("temporada", temporada);
+			newObj.put("lan", lan);
+			
+			
+			String ruta = "./data/data.json";
+			File archivo = new File(ruta);
+			BufferedWriter bw;
+			try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+				fileJson.write(newObj.toJSONString());
+				//System.out.println("Successfully Copied JSON Object to File...");
+				//System.out.println("\nJSON Object: " + obj);
+			}
+	    } catch (Exception e) {
+	    	System.out.println("Error:" + e);
+	    }
+		
+		
+		//Prueba.jsonIdioma();
 		//Escoge el idioma del SO
-		String lanSO = Locale.getDefault().toString();
+		/**String lanSO = Locale.getDefault().toString();
 		if (lanSO.equals("es_ES")) {
 			pathProp = "./ES.properties";
 		} else if (lanSO.equals("en_US")) {
 			pathProp = "./EN.properties";
 		} else {
 			pathProp = "./EN.properties";
-		}
+		}*/
 		//JSONParser parser = new JSONParser();
 		
 		menu();
@@ -121,12 +181,14 @@ public class Main {
 		    /**Properties prop = new Properties();
 		    InputStream is = null;
 		    String pathProp = "";*/
-		    
+		    String lan = "";
 		    //Elige el properties a usar
 		    if (idioma == 1) {
 		    	pathProp = "./EN.properties";
+		    	lan = "EN";
 		    } else if (idioma == 2) {
 		    	pathProp = "./ES.properties";
+		    	lan = "ES";
 		    } else {
 		    	System.out.println("Invalid selection");
 		    }
@@ -135,6 +197,44 @@ public class Main {
 	    	//System.out.println(pathProp);
 	    	is = new FileInputStream(pathProp);
 			prop.load(is);
+			
+			
+			try {
+		    	Object obj = parser.parse(new FileReader("./data/data.json"));
+		    	
+		        JSONObject jsonObject = (JSONObject) obj;
+		        nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+		        maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+		        minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+		        refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+		        String patrocinador = (String) jsonObject.get("patrocinador");
+				String temporada = (String) jsonObject.get("temporada");
+				
+		    	
+			   		
+				
+		    	JSONObject newObj = new JSONObject();
+				newObj.put("nEquipos", nEquipos+"");
+				newObj.put("maxScore", maxScore+"");
+				newObj.put("minScore", minScore+"");
+				newObj.put("refereeLen", refereeLen+"");
+				newObj.put("patrocinador", patrocinador);
+				newObj.put("temporada", temporada);
+				newObj.put("lan", lan);
+				
+				
+				String ruta = "./data/data.json";
+				File archivo = new File(ruta);
+				BufferedWriter bw;
+				try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+					fileJson.write(newObj.toJSONString());
+					//System.out.println("Successfully Copied JSON Object to File...");
+					//System.out.println("\nJSON Object: " + obj);
+				}
+		    } catch (Exception e) {
+		    	System.out.println("Error:" + e);
+		    }
+	    	
 	    	//System.out.println(prop.getProperty("team"));
 	      	break;
 	    case 2:
@@ -231,6 +331,7 @@ public class Main {
                 refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
                 String patrocinador = Keyin.inString(" Insert patrocinador: ");
 	    		String temporada = Keyin.inString(" Insert Temporada: ");
+            	String lang = (String) jsonObject.get("lan");
             	
             	JSONObject newObj = new JSONObject();
         		newObj.put("nEquipos", nEquipos+"");
@@ -239,6 +340,7 @@ public class Main {
         		newObj.put("refereeLen", refereeLen+"");
         		newObj.put("patrocinador", patrocinador);
         		newObj.put("temporada", temporada);
+        		newObj.put("lan", lang);
         		
         		String ruta = "./data/data.json";
         		File archivo = new File(ruta);

@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
 import java.util.Enumeration;
+import java.util.Locale;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
@@ -112,4 +113,65 @@ public class Prueba {
         	raf.setLength(0);
         }
 	}
+	/**public static String jsonIdioma() {
+		int maxScore = 0;
+		int minScore = 0;
+		int refereeLen = 0;
+		int nEquipos = 0;
+		String lan = "";
+		String pathProp = "";
+		JSONParser parser = new JSONParser();
+		try {
+	    	Object obj = parser.parse(new FileReader("./data/data.json"));
+	    	
+	        JSONObject jsonObject = (JSONObject) obj;
+	        nEquipos = Integer.parseInt((String) jsonObject.get("nEquipos"));
+	        maxScore = Integer.parseInt((String) jsonObject.get("maxScore"));
+	        minScore = Integer.parseInt((String) jsonObject.get("minScore"));
+	        refereeLen = Integer.parseInt((String) jsonObject.get("refereeLen"));
+	        String patrocinador = (String) jsonObject.get("patrocinador");
+			String temporada = (String) jsonObject.get("temporada");
+			lan = (String) jsonObject.get("lan");
+	    	
+			if (lan == "es_ES") {
+				pathProp = "./ES.properties";
+			} else if (lan == "en_US") {
+				pathProp = "./EN.properties";
+			} else {
+				String lanSO = Locale.getDefault().toString();
+				if (lanSO.equals("es_ES")) {
+					lan = "es_ES";
+					pathProp = "./ES.properties";
+				} else if (lanSO.equals("en_US")) {
+					lan = "en_US";
+					pathProp = "./EN.properties";
+				} else {
+					lan = "en_US";
+					pathProp = "./EN.properties";
+				}
+			}    		
+			
+	    	JSONObject newObj = new JSONObject();
+			newObj.put("nEquipos", nEquipos+"");
+			newObj.put("maxScore", maxScore+"");
+			newObj.put("minScore", minScore+"");
+			newObj.put("refereeLen", refereeLen+"");
+			newObj.put("patrocinador", patrocinador);
+			newObj.put("temporada", temporada);
+			newObj.put("lan", lan);
+			
+			
+			String ruta = "./data/data.json";
+			File archivo = new File(ruta);
+			BufferedWriter bw;
+			try (FileWriter fileJson = new FileWriter("./data/data.json")) {
+				fileJson.write(newObj.toJSONString());
+				//System.out.println("Successfully Copied JSON Object to File...");
+				//System.out.println("\nJSON Object: " + obj);
+			}
+	    } catch (Exception e) {
+	    	System.out.println("Error:" + e);
+	    }
+		return pathProp;
+	}*/
 }
