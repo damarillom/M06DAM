@@ -8,6 +8,76 @@
 	<description>Planet Eclipse - http://planeteclipse.org/planet/</description>
 
 <item>
+	<title>Eclipse Announcements: Eclipse Foundation Hosted Services Privacy and Acceptable Usage Policy</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/INyihbgYe10/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/INyihbgYe10/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy</link>
+	<description>The Eclipse Foundation recently made available a new policy to make sure that our projects and hosted services are compliant with the General Data Protection Regulation (GDPR).&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/INyihbgYe10&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 08 Nov 2018 16:15:00 +0000</pubDate>
+</item>
+<item>
+	<title>Eclipse Announcements: Eclipse Foundation Specification Process, Part I: The EDP</title>
+	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/5HGN_wF93N8/eclipse-foundation-specification-process-part-i-edp</guid>
+	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/5HGN_wF93N8/eclipse-foundation-specification-process-part-i-edp</link>
+	<description>A quick Eclipse Development Process (EDP) primer.&lt;img alt=&quot;&quot; height=&quot;1&quot; src=&quot;http://feeds.feedburner.com/~r/eclipse/fnews/~4/5HGN_wF93N8&quot; width=&quot;1&quot; /&gt;</description>
+	<pubDate>Thu, 08 Nov 2018 16:15:00 +0000</pubDate>
+</item>
+<item>
+	<title>Christopher Guindon: Eclipse Foundation Hosted Services Privacy and Acceptable Usage Policy</title>
+	<guid isPermaLink="true">https://www.chrisguindon.com/post/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy/</guid>
+	<link>https://www.chrisguindon.com/post/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy/</link>
+	<description>&lt;p&gt;The Eclipse Foundation recently made available a new &lt;a href=&quot;https://www.eclipse.org/org/documents/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy.pdf&quot;&gt;policy&lt;/a&gt;
+to make sure that our projects and hosted services are compliant with
+the General Data Protection Regulation (GDPR).&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://www.eclipse.org/org/documents/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy.pdf&quot;&gt;Eclipse Foundation Hosted Services Privacy and Acceptable Usage Policy&lt;/a&gt; will provide guidance to folks who operate a virtual server or a website hosted either directly
+by the Eclipse Foundation or provided via the Eclipse Foundation’s funding in support
+of an Eclipse Foundation open source project.&lt;/p&gt;
+
+&lt;p&gt;We want to ensure that all such services meet the highest standards of privacy and transparency,
+and to ensure that any collected data is used strictly in support of the activities of its open source projects.&lt;/p&gt;
+
+&lt;p&gt;There are two changes that we would like to highlight. First &lt;a href=&quot;https://bugs.eclipse.org/bugs/show_bug.cgi?id=534384#c6&quot;&gt;we have updated our position&lt;/a&gt;
+on &lt;a href=&quot;https://analytics.google.com/analytics/web/&quot;&gt;Google Analytics (GA)&lt;/a&gt;. Projects will now be allowed to create their own GA property,
+provided they agree to the conditions listed in our new &lt;a href=&quot;https://www.eclipse.org/org/documents/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy.pdf&quot;&gt;policy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Secondly we are better defining the responsibilities of the projects or committers
+responsible for hosting a service or website with the Eclipse Foundation.&lt;/p&gt;
+
+&lt;p&gt;Hosted services and Eclipse Projects can adopt this new policy by creating an issue on Eclipse Bugzilla under &lt;a href=&quot;https://bugs.eclipse.org/bugs/enter_bug.cgi?product=Community&amp;amp;component=Hosted%20Services%20Privacy%20and%20Acceptable%20Usage%20Policy&quot;&gt;Community &amp;gt; Hosted Services Privacy and Acceptable Usage Policy&lt;/a&gt;
+where they acknowledge reading and understanding the policy.&lt;/p&gt;
+
+&lt;p&gt;Those who wish to store Personally Identifiable Information (PII) must create and include a Data Protection Impact Assessment (DPIA) document.
+The DPIA must describe what kinds of PII data will be collected and their purpose. This will have to be updated as your services evolve by
+uploading a new version on Eclipse Bugzilla.&lt;/p&gt;
+
+&lt;p&gt;If a service wishes to retain PII for longer than 1 year, they must produce a &lt;a href=&quot;https://www.chrisguindon.com/post/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy/data-retention-policy-template.pdf&quot;&gt;Data
+Retention Policy (DRP)&lt;/a&gt; that indicates how long they plan to keep each pieces of PII data
+and why they need to keep them for that long.&lt;/p&gt;
+
+&lt;p&gt;For the complete list of requirements &amp;amp; conditions, please make sure to read the &lt;a href=&quot;https://www.eclipse.org/org/documents/eclipse-foundation-hosted-services-privacy-and-acceptable-usage-policy.pdf&quot;&gt;Eclipse Foundation Hosted Services Privacy and Acceptable Usage Policy&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please let us know if you have any questions or concerns regarding this new policy by sending
+your questions to &lt;a href=&quot;mailto:privacy@eclipse.org&quot;&gt;privacy@eclipse.org&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Wed, 07 Nov 2018 20:30:00 +0000</pubDate>
+</item>
+<item>
+	<title>Wayne Beaton: Eclipse Foundation Specification Process, Part I: The EDP</title>
+	<guid isPermaLink="false">http://waynebeaton.wordpress.com/?p=5454</guid>
+	<link>https://waynebeaton.wordpress.com/2018/11/07/eclipse-foundation-specification-process-part-i-the-edp/</link>
+	<description>&lt;p&gt;The Eclipse Foundation Specification Process (EFSP) was authored as an extension to the &lt;a href=&quot;https://www.eclipse.org/projects/dev_process&quot;&gt;Eclipse Development Process&lt;/a&gt; (EDP). With this in mind, before we can discuss the EFSP, we’ll start with a quick EDP primer.&lt;/p&gt;
+&lt;p&gt;At a high (and very simplified) level, the EDP looks a little something like this:&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&quot;edp_lifecycle&quot; class=&quot;alignnone size-full wp-image-5457 aligncenter&quot; src=&quot;https://waynebeaton.files.wordpress.com/2018/11/edp_lifecycle1.png?w=640&quot; /&gt;&lt;/p&gt;
+&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;All open source projects at the Eclipse Foundation &lt;a href=&quot;https://www.eclipse.org/projects/handbook/#starting&quot;&gt;start life&lt;/a&gt; as a &lt;em&gt;proposal&lt;/em&gt;. A proposal literally proposes the creation of a new open source project: the proposal document suggests a name for the new project, and defines many things, including a description and scope of work. The proposal also serves as the nomination and election of all project committers and project leads.&lt;/p&gt;
+&lt;p&gt;The proposal is posted for community feedback for a minimum of two weeks; during that time, the Eclipse Foundation staff works behind the scenes to ensure that the project’s name can be claimed as a trademark, a mentor has been identified, the licensing scheme works, and more. The community feedback period ends with a &lt;em&gt;creation review&lt;/em&gt; which lasts for a minimum of one week. The creation review is the last opportunity for the community and the members of the Eclipse Foundation to provide feedback and express concerns regarding the project.&lt;/p&gt;
+&lt;p&gt;After successful completion of the creation review, and the project resources have been provisioned by the Eclipse Webmaster team, the project team engages in development. Project &lt;em&gt;committers&lt;/em&gt; push code to into the project’s source code repositories, and produce and disseminate &lt;em&gt;milestone&lt;/em&gt; (snapshot) builds to solicit feedback as part of an iterative development process.&lt;/p&gt;
+&lt;p&gt;When the time comes to deliver a formal &lt;em&gt;release&lt;/em&gt;, the project team produces release candidates and engages in a &lt;em&gt;&lt;a href=&quot;https://www.eclipse.org/projects/handbook/#release-review&quot;&gt;release review&lt;/a&gt;&lt;/em&gt;. A release review provides an opportunity for the project team to demonstrate to their &lt;a href=&quot;https://www.eclipse.org/projects/dev_process/#4_6_1_PMC&quot;&gt;Project Management Committee&lt;/a&gt; (PMC) that their content is ready for release, work with the Eclipse Intellectual Property Team to ensure that all of the required IP due diligence has been completed successfully, and give the community and membership a final opportunity provide feedback and express concerns. Following a successful release review, the project team will push out their final (GA) build and announce the official release to their community via established channels.&lt;/p&gt;
+&lt;p&gt;The proposal serves as the first plan for the new open source project. Subsequent releases start with the creation of some sort of plan before reengaging in the development (release) cycle. The level of formality in the planning process varies by project. For many projects, the plan is little more than an acknowledgement that further development is needed. But for some projects, planning is a well-defined open process by which the committers work with their communities to identify themes and issues that will be addressed by the release.&lt;/p&gt;
+&lt;p&gt;In my next post, I’ll discuss how this process is extended by the the EFSP. Then, I’ll start digging into the details.&lt;/p&gt;
+&lt;p&gt;You can find the community draft of the Eclipse Foundation Specification Process &lt;a href=&quot;https://docs.google.com/document/d/1ongNUyGvZPtrcuxA7RQNV2qBESFcAphQbzdk3pUIQ5s/edit?usp=sharing&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+	<pubDate>Wed, 07 Nov 2018 15:47:44 +0000</pubDate>
+</item>
+<item>
 	<title>Eclipse Announcements: Eclipse Foundation Updating Contributor and Committer Agreements</title>
 	<guid isPermaLink="true">http://feedproxy.google.com/~r/eclipse/fnews/~3/LSGG8KaWokY/new-eclipse-foundation-committer-and-contributor-agreements</guid>
 	<link>http://feedproxy.google.com/~r/eclipse/fnews/~3/LSGG8KaWokY/new-eclipse-foundation-committer-and-contributor-agreements</link>
@@ -18,7 +88,8 @@
 	<title>Mike Milinkovich: New Eclipse Foundation Committer and Contributor Agreements</title>
 	<guid isPermaLink="false">http://eclipse-foundation.blog/?p=1470</guid>
 	<link>https://eclipse-foundation.blog/2018/11/05/new-eclipse-foundation-committer-and-contributor-agreements/</link>
-	<description>&lt;p&gt;Over my almost 15 years of sharing updates about what’s going on at Eclipse, some blogs are more important than others.  &lt;b&gt;This one is important&lt;/b&gt; &lt;b&gt;as it requires action by our members, committers, and contributors&lt;/b&gt;!  There is a lot of ground to cover explaining what’s going on and why we’re changing things, so please forgive me for a longer than normal post.&lt;/p&gt;
+	<description>&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; to see redline versions of the changes to the documents discussed below, please visit this &lt;a href=&quot;https://eclipse-foundation.blog/contribution-committer-agreements/&quot;&gt;contribution and committer agreements&lt;/a&gt; page.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Over my almost 15 years of sharing updates about what’s going on at Eclipse, some blogs are more important than others.  &lt;b&gt;This one is important&lt;/b&gt; &lt;b&gt;as it requires action by our members, committers, and contributors&lt;/b&gt;!  There is a lot of ground to cover explaining what’s going on and why we’re changing things, so please forgive me for a longer than normal post.&lt;/p&gt;
 &lt;p style=&quot;padding-left: 30px;&quot;&gt;tl;dr.  The Eclipse Foundation is starting to develop specifications. First for Jakarta EE, but soon for other areas as well. We want to make it clear that contributions to our open source projects may someday be used to create a specification, because we believe in code-first innovation. We also believe that if you’re contributing to open source, you &lt;i&gt;want &lt;/i&gt;your contributions to be used for open purposes, including specs.&lt;/p&gt;
 &lt;p style=&quot;padding-left: 30px;&quot;&gt;We are updating our standard contributor and committer agreements, and we will be requiring all our committers and contributors, as well as those members who have member committer agreements,  to re-sign their agreement with us.&lt;/p&gt;
 &lt;p style=&quot;padding-left: 30px;&quot;&gt;To make this happen, we will be reaching out to everyone who needs to re-sign.  You don’t have to do anything yet – just be aware the change is coming, and please act when we do make contact with you.&lt;/p&gt;
@@ -468,269 +539,6 @@ class DomainmodelDotGeneratorTest {
 &lt;li&gt;&lt;a href=&quot;https://itunes.apple.com/us/app/eclipsecon-europe/id1280396790?ls=1&amp;amp;mt=8&quot; target=&quot;_blank&quot;&gt;iOS&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=&quot;field field-name-field-news-image field-type-image field-label-hidden&quot;&gt;&lt;div class=&quot;field-items&quot;&gt;&lt;div class=&quot;field-item even&quot;&gt;&lt;a href=&quot;https://www.eclipsecon.org/europe2018/news/download-conference-app&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;img-responsive block-center&quot; height=&quot;250&quot; src=&quot;https://www.eclipsecon.org/sites/default/files/styles/solstice_news_-_default_-_thumbnail/public/news/app_image_square_0.png?itok=itBXZCK4&quot; width=&quot;250&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description>
 	<pubDate>Wed, 17 Oct 2018 19:34:17 +0000</pubDate>
-</item>
-<item>
-	<title>Niko Stotz: Xtext Editors within Sirius Diagrams – the Best of both Worlds!</title>
-	<guid isPermaLink="false">https://www.nikostotz.de/blog/?p=406</guid>
-	<link>https://www.nikostotz.de/blog/xtext-editors-within-sirius-diagrams/</link>
-	<description>&lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; Altran’s &lt;strong&gt;Xtext / Sirius Integration&lt;/strong&gt; provides the full Xtext experience for Sirius direct editors (a.k.a. pressing F2 in diagram) and properties editors. It’s &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/&quot;&gt;highly configurable&lt;/a&gt;, &lt;a href=&quot;https://altran-mde.github.io/xtext-sirius-integration.io/userguide/&quot;&gt;well-documented&lt;/a&gt;, and &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/&quot;&gt;released under EPL 2&lt;/a&gt;. I’ll &lt;a href=&quot;https://www.eclipsecon.org/europe2018/sessions/textual-and-graphical-modeling-xtext-editors-within-sirius-diagrams&quot;&gt;present it at EclipseCon 2018&lt;/a&gt; next week in Ludwigsburg. We intend to contribute this to the Sirius project.&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_423&quot; style=&quot;width: 662px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-423&quot; height=&quot;196&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/AllFeatures.png&quot; width=&quot;652&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Example of Xtext’s error checking and auto-completion support within Sirius diagram figure&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;&lt;span id=&quot;more-406&quot;&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Both textual and graphical modeling have their well-known strengths and weaknesses – obviously, we want the best of both worlds!&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.eclipse.org/Xtext/&quot;&gt;Xtext&lt;/a&gt; and &lt;a href=&quot;https://www.eclipse.org/sirius/&quot;&gt;Sirius&lt;/a&gt; are among the most-used Eclipse Modeling Framework technologies, covering textual and graphical modeling, respectively. &lt;a href=&quot;https://www.eclipsecon.org/france2014/session/sirius-xtext.html&quot;&gt;Previous&lt;/a&gt;   &lt;a href=&quot;https://www.eclipsecon.org/france2017/session/integrating-xtext-and-sirius-strategies-and-pitfalls&quot;&gt;EclipseCon&lt;/a&gt; talks discussed the different usage scenarios and difficulties of integrating these technologies. We focused on the “Xtext editors within Sirius diagrams and properties view” scenario and could solve most of the integration difficulties. The result is called Xtext / Sirius Integration.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Our main goals were to be a good Sirius citizen, i.e. configuring all details in the Odesign model, and to support as much of Xtext’s features as possible without requiring changes to the Xtext language.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;We would like to contribute the code to the Sirius project. Initial discussions already started, so stay tuned.&lt;/p&gt;
-&lt;p&gt;I’m very happy to discuss any questions or ideas at the &lt;a href=&quot;https://www.eclipsecon.org/europe2018/sessions/textual-and-graphical-modeling-xtext-editors-within-sirius-diagrams&quot;&gt;EclipseCon 2018&lt;/a&gt; next week in Ludwigsburg – please approach me! I’ll present Xtext / Sirius Integration at Wednesday, Oct. 24th, 10:25 am on Theater Stage. See you there!&lt;/p&gt;
-&lt;h2&gt;Main Features&lt;/h2&gt;
-&lt;p&gt;Use Cases&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use Xtext as direct editor for Sirius diagram figures and connections&lt;/li&gt;
-&lt;li&gt;Use Xtext in Sirius property editors&lt;/li&gt;
-&lt;li&gt;Edit parts of the Sirius editor’s model with Xtext&lt;/li&gt;
-&lt;li&gt;Edit text stored in the model with Xtext&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Configuration Options&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Single-line or multi-line Xtext editor&lt;/li&gt;
-&lt;li&gt;Limit the editable features&lt;/li&gt;
-&lt;li&gt;Configure pre-selected features&lt;/li&gt;
-&lt;li&gt;Prepend or append text to model contents in order to provide a valid Xtext document&lt;/li&gt;
-&lt;li&gt;Ignore selected nested features&lt;/li&gt;
-&lt;li&gt;Use a different Xtext grammar for persisting and editing a model&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Examples&lt;/h2&gt;
-&lt;p&gt;The &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/tree/master/demo&quot;&gt;source code of all examples&lt;/a&gt; is available at github.&lt;/p&gt;
-&lt;p&gt;The github readme provides &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/&quot;&gt;more details on the examples&lt;/a&gt;.&lt;/p&gt;
-&lt;h3&gt;Smart UML Class Attributes&lt;/h3&gt;
-&lt;p&gt;Assume a model and diagram akin to UML class diagrams.&lt;/p&gt;
-&lt;p&gt;Each attribute has a visibility, a name, a type, a multiplicity with lower and upper bounds, and a (possibly long) description text. We can edit these features in one line with full Xtext support.&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_412&quot; style=&quot;width: 236px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-412&quot; height=&quot;95&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/InvalidVisibility.png&quot; width=&quot;226&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Xtext reports invalid visibility&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_410&quot; style=&quot;width: 452px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-410&quot; height=&quot;122&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/ConstantAutoComplete.png&quot; width=&quot;442&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Xtext provides auto-completion for referenced constants&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Xtext / Sirius Integration allows to edit all the visible features of the attribute just as we see them, without fiddling around in property editors. It automatically checks for valid input (i.e. does not accept &lt;tt&gt;~&lt;/tt&gt; as visibility) and provides auto-completion for references to declared constants.&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_409&quot; style=&quot;width: 236px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-409&quot; height=&quot;72&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/AttributeNamePreSelected.png&quot; width=&quot;226&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Pre-selecting the most edited part&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;We hide the description feature from the Xtext editor, as it makes no sense to edit it in-line. Also, we pre-select only the attribute’s name. This way, we changed only the name without touching the other features, if the user pressed F2, typed something, and pressed enter.&lt;/p&gt;
-&lt;p&gt;We can still edit all of the features separately in the properties view.&lt;/p&gt;
-&lt;h3&gt;Markup Language for Descriptions&lt;/h3&gt;
-&lt;p&gt;Assume a model where every element can have a description. Formally, the description is just a string feature of the element. However, the user may use HTML-like tags in the description. A build server task collects the descriptions of all elements of one model and combines them into one HTML page. We’d have an Xtext grammar for HTML.&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_411&quot; style=&quot;width: 713px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-411&quot; height=&quot;149&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/DescriptionProperties.png&quot; width=&quot;703&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;HTML-like documentation language with Xtext support in Properties View&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;As HTML goes, we need to start with a &lt;tt&gt;&amp;lt;html&amp;gt;&lt;/tt&gt; tag, followed by a &lt;tt&gt;&amp;lt;head&amp;gt;&lt;/tt&gt; section, and only in the &lt;tt&gt;&amp;lt;body&amp;gt;&lt;/tt&gt; the user may add their description text. Also, we need to finish the text by closing both &lt;tt&gt;&amp;lt;body&amp;gt;&lt;/tt&gt; and &lt;tt&gt;&amp;lt;html&amp;gt;&lt;/tt&gt;. We don’t want the user to add this boilerplate to every description, as it’s cumbersome, error-prone, and we’d need to remove it in the build step. Still, we’d like to use our Xtext grammar.&lt;/p&gt;
-&lt;p&gt;With Xtext / Sirius Integration, we define a prefix (&lt;tt&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;dummy&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&lt;/tt&gt;) and suffix (&lt;tt&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/tt&gt;). This way, the model contains only the actual description, and the user still benefits from all the goodies of our Xtext HTML language, like using only valid tags, or closing them in the correct order.&lt;/p&gt;
-&lt;p&gt;We can provide such an editor to the user within the diagram and/or in the properties view.&lt;/p&gt;
-&lt;h3&gt;Smart UML Class Associations&lt;/h3&gt;
-&lt;p&gt;Assume a model and diagram akin to UML class diagrams. Each class is represented by a rectangle, associations between classes are shown as connections.&lt;/p&gt;
-&lt;p&gt;The model is persisted with Xtext. Example:&lt;/p&gt;
-&lt;pre&gt;constant MAX_ROOMS = 23
-constant MAX_PEOPLE = 42
-constant MORE_CONSTANT = MAX_ROOMS
-
-class House {
-  public inhabitants: string[1..MAX_PEOPLE]
-}
-class Room {
-  public size: integer[2..2]
-}
-
-association rooms House --&amp;gt; Room[1..MAX_ROOMS]
-&lt;/pre&gt;
-&lt;p&gt;The Xtext grammar might be:&lt;/p&gt;
-&lt;pre&gt;grammar com.example.classes with org.eclipse.xtext.common.Terminals
-
-generate classes &quot;http://example.com/Classes&quot;
-
-ClassModel:
-	content+=Content*
-;
-
-Content:
-	Constant
-	| Class
-	| Association
-;
-
-Constant:
-	'constant'
-	name=ID
-	'=' initial=Value
-
-// omitting Class, Value, ...
-
-Association:
-	'association'
-	name=ID
-	source=[Class] '--&amp;gt;' target=[Class]
-	'[' lowerBound=Value '..' upperBound=Value ']' 
-&lt;/pre&gt;
-&lt;p&gt;We want to display and edit the name and multiplicity of the association as connection label. We want to get full Xtext support (e.g. auto-completion for referenced constants in multiplicity).&lt;/p&gt;
-&lt;p&gt;However, for technical reasons, we can only hide features at the beginning and/or end of the element’s text. To solve this issue, we create another Xtext language and use this one in our diagrams:&lt;/p&gt;
-&lt;pre&gt;grammar com.example.classes.edit with com.example.classes
-
-import &quot;http://example.com/Classes&quot;
-
-EditClassModel returns ClassModel:
-	ClassModel
-;
-
-@Override
-Association:
-	'association'
-	name=ID
-	'[' lowerBound=Value '..' upperBound=Value ']' 
-	source=[Class] '--&amp;gt;' target=[Class]
-;
-&lt;/pre&gt;
-&lt;p&gt;We extend the original grammar and override the Association grammar rule. All other grammar rules remain untouched. We move the &lt;tt&gt;source&lt;/tt&gt; and &lt;tt&gt;target&lt;/tt&gt; features to the end of the element’s text. This way, we can hide them from the user: They should edit the source and target by dragging the connection.&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_413&quot; style=&quot;width: 345px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-413&quot; height=&quot;202&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/OriginalGrammar.png&quot; width=&quot;335&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Model in original grammar. Note the association’s source and target are in-between its name and multiplicity.&lt;/p&gt;&lt;/div&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_408&quot; style=&quot;width: 499px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-408&quot; height=&quot;195&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/ConnectionAlternativeGrammar.png&quot; width=&quot;489&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Xtext editor using the alternative grammar, hiding the association’s source and target features.&lt;/p&gt;&lt;/div&gt;
-&lt;h2&gt;Complications&lt;/h2&gt;
-&lt;p&gt;We spent more than six months on this development, and had to overcome quite a few hurdles. Please read about some of them below.&lt;/p&gt;
-&lt;h3&gt;Deep Technology Stack&lt;/h3&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_427&quot; style=&quot;width: 867px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-427&quot; height=&quot;409&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/StackedAbstractions.png&quot; width=&quot;857&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Deep technology stack&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;Both Xtext and Sirius are very mature, flexible, and complex frameworks. It’s not surprising they both stand on the shoulder of giants, i.e. re-use lots of other technologies. Xtext / Sirius Integration balances on top of these behemoths standing on other giants. In this height, the air is thin and we feel the &lt;a href=&quot;https://en.wikipedia.org/wiki/Leaky_abstraction&quot;&gt;Law of Leaky Abstractions&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To achieve our goal of best possible integration, we have to weave together both technology stacks on various levels, leading to lots of gory gut work.&lt;/p&gt;
-&lt;p&gt;Sirius follows a very rigorous “separation of concerns” approach (partially because it seems to be required by underlying technologies). As a result, for each “thing” in Sirius (e.g. a node, connection, or tool), there is one class in each concern. As soon as we required even the slightest adjustment on any aspect, we had to duplicate this whole thread of classes throughout all concerns.&lt;/p&gt;
-&lt;h3&gt;Graphical / Event Integration&lt;/h3&gt;
-&lt;p&gt;I was most scared about the graphical and event integration, as my previous experience in this field suggested. Luckily, there is another Open Source project called &lt;a href=&quot;https://github.com/Yakindu/statecharts&quot;&gt;Yakindu Statecharts&lt;/a&gt;. It provides, among lots of other features, graphical state machine modeling. It’s not based on Sirius, but shares the same base (&lt;a href=&quot;https://www.eclipse.org/gef/&quot;&gt;Graphical Editing Framework GEF&lt;/a&gt;, to be precise). Yakindu Statecharts also provides Xtext editors within the diagram – jackpot! We could re-use most of the drawing, sizing, and event integration.&lt;/p&gt;
-&lt;p&gt;As a sidenote, I think this is a prime example of Open Source’s power: Xtext is Open Source, Sirius is Open Source, and so is Yakindu Statecharts. This whole integration would never have been possible without access to the source code! Statecharts happily accepted a pull request to improve re-usability of their code. Thanks again!&lt;/p&gt;
-&lt;h3&gt;Model Integration&lt;/h3&gt;
-&lt;p&gt;Both Xtext and Sirius edit a model, but in very different ways. Integrating them was the biggest technical challenge – as we knew from &lt;a href=&quot;https://www.eclipsecon.org/france2014/session/sirius-xtext.html&quot;&gt;previous&lt;/a&gt; &lt;a href=&quot;https://www.eclipsecon.org/france2017/session/integrating-xtext-and-sirius-strategies-and-pitfalls&quot;&gt;EclipseCon&lt;/a&gt; talks.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following discussion touches quite intricate issues; explaining them with text only is tough. If you’re lost, visit my talk at EclipseCon or view it’s video recording (I’ll link to it once it’s online).&lt;/p&gt;
-&lt;p&gt;Xtext / Sirius Integration can work on two different bases:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Storing the Xtext-edited model as text in the Sirius model&lt;/li&gt;
-&lt;li&gt;Editing the same model with Xtext and Sirius&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Base 1) is not that hard: When the user presses F2, we open an Xtext editor, read the text attribute from the Sirius model, Xtext parses it and creates its own, independent model. The user edits the Xtext model, and when the editor is closed, we ask Xtext for the changed text and write it back to the text attribute in the Sirius model.&lt;/p&gt;
-&lt;p&gt;Base 2) is much more challenging. To understand why, we have to look at some details.&lt;/p&gt;
-&lt;p&gt;(We assume the Sirius model is persisted via Xtext. At Altran, this is the most common use-case, as this allows sensible diff/merge on models without taming EMFCompare. Anyways, most of the discussion applies equally to other persistence formats.)&lt;/p&gt;
-&lt;p&gt;Let’s have a look at the lifecycle of a Sirius diagram persisted via Xtext:&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_426&quot; style=&quot;width: 863px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-426&quot; height=&quot;382&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/EmfLifecycle.png&quot; width=&quot;853&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Lifecycle of a Sirius diagram&lt;/p&gt;&lt;/div&gt;
-&lt;ol&gt;
-&lt;li&gt;The user opens a Sirius diagram.&lt;/li&gt;
-&lt;li&gt;Sirius figures out the diagram is based on a model that’s persisted via Xtext. Sirius asks Xtext to read the model.&lt;/li&gt;
-&lt;li&gt;Xtext reads the model text file.&lt;/li&gt;
-&lt;li&gt;Xtext parses the file contents and creates an read-only Abstract Syntax Tree (AST).&lt;/li&gt;
-&lt;li&gt;Xtext converts the AST into a model instance.&lt;/li&gt;
-&lt;li&gt;The model instance is ready to use. Sirius uses the model instance to display the diagram.&lt;/li&gt;
-&lt;li&gt;The user changes the diagram, e.g. they add some connections or remove some elements.&lt;/li&gt;
-&lt;li&gt;Sirius changes the underlying model without saving it. At this point, the contents of the file and the model instance differ.&lt;/li&gt;
-&lt;li&gt;The user saves the diagram.&lt;/li&gt;
-&lt;li&gt;Sirius asks Xtext to persist the current state of the model instance.&lt;/li&gt;
-&lt;li&gt;Xtext serializes the model into text. Xtext does not change the AST.&lt;/li&gt;
-&lt;li&gt;Xtext writes the text into the text file.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;So what changes if the user didn’t use Sirius to change the model, but the Xtext / Sirius Integration?&lt;/p&gt;
-&lt;div class=&quot;wp-caption aligncenter&quot; id=&quot;attachment_425&quot; style=&quot;width: 928px;&quot;&gt;&lt;img alt=&quot;&quot; class=&quot;size-full wp-image-425&quot; height=&quot;423&quot; src=&quot;https://www.nikostotz.de/blog/wp-content/uploads/2018/10/XtextLifecycle.png&quot; width=&quot;918&quot; /&gt;&lt;p class=&quot;wp-caption-text&quot;&gt;Lifecycle of Xtext edit within Sirius diagram&lt;/p&gt;&lt;/div&gt;
-&lt;p&gt;We should only show to the user the interesting part of the underlying model. If they pressed F2 on one UML Class Attribute (as an example), they should only edit this Attribute, not the whole model.&lt;br /&gt;
-We cannot use the existing AST, as it might be outdated. Also, for fundamental technical reasons, Xtext cannot parse/serialize parts of a model file.&lt;br /&gt;
-Thus, we ask Xtext to serialize the complete model instance into a memory buffer. We create a dummy Xtext file and copy the text there. Xtext does its usual work of parsing and creating the dummy model instance (which, at this point, is identical to Sirius’ model instance).&lt;br /&gt;
-We hide all text from the user they should not edit. Again for technical reasons, we can only hide text &lt;i&gt;before&lt;/i&gt; or &lt;i&gt;after&lt;/i&gt; the visible text, not somewhere in between. This allows also to hide some features of the edited attribute: If the UML Class Attribute’s description was the first feature in the model text, we can hide it – and the user cannot edit it any more.&lt;/p&gt;
-&lt;p&gt;The user changed the text to their wishes. As Xtext flags any issues directly, we assume the user did not introduce any errors. But all these changes happened in the dummy Xtext file; we have to get them back into the Sirius model instance.&lt;/p&gt;
-&lt;p&gt;We could try to merge the changed text from Xtext into the model’s text. But we all know text merge is not reliable on big changes, so we prefer to merge on a model basis. Given the known restrictions, model merge works mostly ok. It gets complicated if the user changed names or similar attributes that are part of an element’s URI.&lt;/p&gt;
-&lt;p&gt;Even more complicated are cross-references. Assume our model instance contains Constants and Classes with Attributes. The Attributes’ initial values can refer to the Constants. If the user pressed F2 on the Attribute, we create a complete copy into a dummy model instance. The user asks auto-complete for available Constants, and auto-complete proposes the Constants from the dummy model instance.&lt;br /&gt;
-Once the user is finished, we merge their changes back into the Sirius model instance. But we only merge the edited Attribute and throw away the rest of the model – including the referenced Constant!&lt;/p&gt;
-&lt;p&gt;Luckily, both Xtext and Sirius are based on EMF, and EMF knows a concept called proxies. If EMF loads a model and finds a reference to an element outside of this model, it only creates a placeholder, a.k.a. proxy, for the external element. This placeholder stores the URI of the external element. Once required, EMF loads the external resource and replaces the proxy with the real thing.&lt;br /&gt;
-We abuse this mechanism a bit to solve our dangling reference problem: Before merging the Attribute back into the Sirius model instance, we check the Attribute for any references to the dummy model. If we find one, we convert the target into a proxy. After finishing the merge we ask EMF to resolve all proxies in the Sirius model instance. As the target was there in the copied dummy model instance, and we didn’t change anything outside the merged part, we can be sure these proxies will be resolved.&lt;/p&gt;
-&lt;p&gt;We can follow a similar approach for references from the Sirius model instance to element merged back from the dummy model instance.&lt;/p&gt;
-&lt;h3&gt;odesign Integration&lt;/h3&gt;
-&lt;p&gt;The developer defines all aspects of a Sirius diagram in a odesign file. We wanted to keep this approach. Thankfully, Sirius provides all the necessary hooks – but they are hard to find. Interestingly, the hooks work very different for seemingly similar aspects: Adding context menu entries to the Properties part of the odesign file requires a completely different approach than adding context menu entries to the Diagram part of the odesign file.&lt;/p&gt;
-&lt;p&gt;I’m quite satisfied with the result: Only the most advanced use cases require coding outside the odesign file.&lt;/p&gt;
-&lt;h2&gt;Further Reading&lt;/h2&gt;
-&lt;p&gt;Please refer to the &lt;a href=&quot;https://altran-mde.github.io/xtext-sirius-integration.io/userguide/&quot;&gt;extensive user guide&lt;/a&gt; (also available as &lt;a href=&quot;https://altran-mde.github.io/xtext-sirius-integration.io/userguide/xtext-sirius-userguide.pdf&quot;&gt;PDF&lt;/a&gt;) for more details and known issues.&lt;/p&gt;
-&lt;p&gt;The github readme provides &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/&quot;&gt;more details on the examples&lt;/a&gt; and information about required dependencies.&lt;/p&gt;
-&lt;p&gt;Xtext / Sirius integration is &lt;a href=&quot;https://github.com/altran-mde/xtext-sirius-integration/&quot;&gt;released under EPL 2&lt;/a&gt; at github.&lt;/p&gt;
-&lt;p&gt;We provide an &lt;a href=&quot;https://altran-mde.github.io/xtext-sirius-integration.io/p2/&quot;&gt;update site&lt;/a&gt;.&lt;/p&gt;</description>
-	<pubDate>Wed, 17 Oct 2018 13:55:12 +0000</pubDate>
-        <enclosure url="https://www.nikostotz.de/blog/wp-content/uploads/2018/10/AllFeatures.png" length="2854" type="image/png"/>
-</item>
-<item>
-	<title>N4JS: Short-Circuit Evaluation in N4JS</title>
-	<guid isPermaLink="false">tag:blogger.com,1999:blog-7569987920628430132.post-761854849853353188</guid>
-	<link>https://n4js.blogspot.com/2018/10/short-circuit-evaluation-in-n4js_17.html</link>
-	<description>&lt;h4&gt;Short-circuit evaluation is a popular feature of many programming languages and also part of N4JS. In this post, we show how the control-flow analysis of the N4JS-IDE deals with short-circuit evaluation, since it can have a substantial effect on the data flow and execution of a program.&lt;/h4&gt;&lt;br /&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://4.bp.blogspot.com/-g6wjXUt3sao/W8buQnfTrcI/AAAAAAAAADk/kAsgHzdkJ1UFfWKwj-MvMgyk5_d09iwtACLcBGAs/s1600/introduction.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://4.bp.blogspot.com/-g6wjXUt3sao/W8buQnfTrcI/AAAAAAAAADk/kAsgHzdkJ1UFfWKwj-MvMgyk5_d09iwtACLcBGAs/s1600/introduction.png&quot; width=&quot;575&quot; /&gt;&lt;/a&gt;&lt;/div&gt;Short circuit evaluation is a means to improve runtime performance when evaluating boolean expressions. This improvement is a result of skipping code execution. The example above shows an &lt;span&gt;if&lt;/span&gt;-statement whose condition consists of two boolean expressions that combine the values of &lt;span&gt;1&lt;/span&gt;, &lt;span&gt;2&lt;/span&gt; and &lt;span&gt;3,&lt;/span&gt; and its control flow graph. Note that the number literals are placeholders for more meaningful subexpressions.&lt;br /&gt;&lt;br /&gt;First the &lt;i&gt;logical and&lt;/i&gt;, then the &lt;i&gt;logical or&lt;/i&gt; gets evaluated: &lt;span&gt;(1 &amp;amp;&amp;amp; 2) || 3&lt;/span&gt;. In case the expression &lt;span&gt;1 &amp;amp;&amp;amp; 2&lt;/span&gt; evaluates to true, the evaluation of the subclause &lt;span&gt;3&lt;/span&gt; will be skipped and the evaluation of the entire condition results to true. This skipping of nested boolean expressions is called &lt;i&gt;short circuit evaluation&lt;/i&gt;.&lt;br /&gt;&lt;br /&gt;However, instead of skipping expression &lt;span&gt;3&lt;/span&gt;, expression &lt;span&gt;2&lt;/span&gt; might be skipped. In case condition &lt;span&gt;1&lt;/span&gt; does not hold, the control flow will continue with condition &lt;span&gt;3&lt;/span&gt; right away. This control flow completely takes places within the if-condition, whereas the former short circuit targets the then block.&lt;br /&gt;&lt;br /&gt;The reasoning behind short circuit evaluation is  that the skipped code does not affect the result of the whole boolean  expression. If the left hand side of the logical or expression evaluates  to true, the whole or expression also does. Only if the left hand side  is false, the right hand side will be evaluated. Complementary, the  right hand side of a logical and expression is skipped in case the left  hand side evaluates to false.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h4&gt;Side Effects&lt;/h4&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div&gt;Risks of short circuit evaluation might arise in case a subexpression has side effects: These side effects will not occur if the subexpression is skipped. However, a program that relies on side effects of expressions inside an &lt;span&gt;if&lt;/span&gt;-condition can be called fragile (or adventurous). In any case it is recommended to write side-effect free conditions.&lt;/div&gt;&lt;br /&gt;&lt;div&gt;&lt;br /&gt;&lt;/div&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-0JcnBeJ-1Rk/W8buRqUWCvI/AAAAAAAAADw/zYwwORwyclEdUHm5HQex4aKR5UPHlATIACLcBGAs/s1600/side_effects.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-0JcnBeJ-1Rk/W8buRqUWCvI/AAAAAAAAADw/zYwwORwyclEdUHm5HQex4aKR5UPHlATIACLcBGAs/s1600/side_effects.png&quot; width=&quot;575&quot; /&gt;&lt;/a&gt;&lt;/div&gt;Have a look at the example above. In case variable &lt;span&gt;i&lt;/span&gt; has a value of zero, the right hand side expression &lt;span&gt;i++&lt;/span&gt; is executed, otherwise, it is skipped. The side effect here is the post-increment the value of &lt;span&gt;i&lt;/span&gt;. If the value of &lt;span&gt;i&lt;/span&gt; is other than zero, this value will be printed out. Otherwise, the value will be incremented but not printed. The control flow shows this behavior with the edge starting at &lt;span&gt;i&lt;/span&gt; and targeting the symbol &lt;span&gt;console&lt;/span&gt;.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h4&gt;Loops&lt;/h4&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-1L_PrkVxmYg/W8buQulSsEI/AAAAAAAAADc/Dh9U1bA9ZboCQP52QjjPIync_DTyJL2AQCLcBGAs/s1600/loops.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-1L_PrkVxmYg/W8buQulSsEI/AAAAAAAAADc/Dh9U1bA9ZboCQP52QjjPIync_DTyJL2AQCLcBGAs/s1600/loops.png&quot; width=&quot;575&quot; /&gt;&lt;/a&gt;&lt;/div&gt;Loop conditions also benefit from short circuit evaluation. This is important to know when reasoning about the all possible control flow paths through the loop: Each short circuit will introduce another path. Combining all of them makes data flow in loops difficult to understand in case of side effects in the subconditions.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;h4&gt;Creative use of short circuit evaluation&lt;/h4&gt;&lt;div&gt;&lt;br /&gt;Misusing short circuit evaluation can mimic if-statements by using  expressions but without using  the language feature of conditional expressions (i.e. &lt;span&gt;condition() ? then() : else()&lt;/span&gt;). This could be used when if-statements should be executed e.g. when passing  arguments to method calls, or when computing the update part of  for-loops.&lt;/div&gt;&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://2.bp.blogspot.com/-bQAq2BWre9s/W8buRTY5OJI/AAAAAAAAADo/uzZ-OqHynNcfrh1k6jYMVbN2MkhiI9xtQCLcBGAs/s1600/modelling.png&quot; style=&quot;clear: left; float: left; margin-bottom: 1em; margin-right: 1em;&quot; width=&quot;575&quot;&gt;&lt;img border=&quot;0&quot; src=&quot;https://2.bp.blogspot.com/-bQAq2BWre9s/W8buRTY5OJI/AAAAAAAAADo/uzZ-OqHynNcfrh1k6jYMVbN2MkhiI9xtQCLcBGAs/s1600/modelling.png&quot; width=&quot;575&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;The picture above shows the two versions: the first uses an if-statement and the second uses an  expression statement. These two statements call the functions &lt;span&gt;condition&lt;/span&gt;, &lt;span&gt;then&lt;/span&gt; and &lt;span&gt;end&lt;/span&gt;. Depending on the return value of &lt;span&gt;condition&lt;/span&gt;, the function &lt;span&gt;then&lt;/span&gt; is  executed or not. Consequently, the printouts are either &quot;condition then  end&quot; or &quot;condition end&quot;, depending on the control flow.&lt;br /&gt;&lt;br /&gt;The corresponding control flows are depicted on the right: The upper three lines refer to the if-statement, and the lower three lines to the expression statement. They reveal that the expression statement  behaves similar to the if-statement. Note that the control flow edge  in the last line that skips the nodes &lt;span&gt;end&lt;/span&gt; and &lt;span&gt;end()&lt;/span&gt; is never traversed since the logical or expression always evaluates to true.&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;text-align: right;&quot;&gt;&lt;span style=&quot;font-size: x-small;&quot;&gt;by Marcus Mews&lt;/span&gt;&lt;/div&gt;&lt;br /&gt;</description>
-	<pubDate>Wed, 17 Oct 2018 09:28:18 +0000</pubDate>
-	<author>noreply@blogger.com (Project N4JS)</author>
-</item>
-<item>
-	<title>Mike Milinkovich: Introducing the Jakarta EE Specification Process</title>
-	<guid isPermaLink="false">http://mmilinkov.wordpress.com/?p=1466</guid>
-	<link>https://eclipse-foundation.blog/2018/10/16/jakarta-spec-process/</link>
-	<description>&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;I am very happy to announce that we are publishing a draft of the &lt;/span&gt;&lt;a href=&quot;https://docs.google.com/document/d/1ongNUyGvZPtrcuxA7RQNV2qBESFcAphQbzdk3pUIQ5s/edit&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;Eclipse Foundation Specification Process&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; for community review and feedback. This specification process will be used by Jakarta EE as the new open specification process, replacing the JCP process previously used for Java EE. It is also expected that this new process will be of interest to other Eclipse working groups. &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We are really looking forward to your feedback, which you can do via the Jakarta EE Community &lt;/span&gt;&lt;a href=&quot;https://accounts.eclipse.org/mailing-list/jakarta.ee-community&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;mailing list&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; (preferred), or on the &lt;/span&gt;&lt;a href=&quot;https://docs.google.com/document/d/1ongNUyGvZPtrcuxA7RQNV2qBESFcAphQbzdk3pUIQ5s/edit&quot; rel=&quot;noopener&quot; target=&quot;_blank&quot;&gt;document comments&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;.  The feedback provided will be used as input to finalizing a first version of the specification process and its adoption by Jakarta EE and other working groups at the Eclipse Foundation.  &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;As you are reviewing this draft specification process, please keep in mind the following key points about the approach that was taken by the Specification Committee. &lt;/span&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want to design a specification process to replace the JCP. While there are many differences with the JCP, the key objective was to make the whole process as lightweight as possible. &lt;/span&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want the specification process to be as close to open source development as possible. This is actually not a trivial exercise, as by its very nature drafting specifications is a somewhat different process.&lt;/span&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;This is the &lt;/span&gt;&lt;b&gt;Eclipse&lt;/b&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; Spec Process, so we want to reuse the &lt;/span&gt;&lt;a href=&quot;https://www.eclipse.org/projects/dev_process/development_process.php&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Eclipse Development Process&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt; wherever possible, and we want to ensure that the general flow and tone of the EDP is followed. &lt;/span&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want to create a process that allows code-first development. Specifically, we want to enable a culture where experimentation can happen in open source and then have specifications be based on those experiences. &lt;/span&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We want the specifications that result from this process to be as high quality as possible. In particular, this means that we need to take care of the intellectual property flows, and to protect the community’s work from bad actors. This requirement manifests as two fundamentally important differences from the EDP: &lt;/span&gt;
-&lt;ul&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Specification Committee approval is required for releases from Spec Projects, in addition to the normal PMC approval; and &lt;/span&gt;&lt;/li&gt;
-&lt;li style=&quot;font-weight: 400;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;We introduce the notion of “Participants” who are committers who represent specific member companies on a Spec Project. This is necessary to ensure that the IP contributions (particularly patents) from companies are properly captured by the process.&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;All of us at the Eclipse Foundation would like to recognize the tireless efforts of the members of the Specification Committee. A lot of hard work has gone into this document, and it’s very much appreciated. We are certain that Jakarta EE, and many other Eclipse technologies, benefit from the thoughtful efforts of this Committee.  In particular, we would like to thank the following Specification Committee members and alternates: &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;padding-left: 60px;&quot;&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Fujitsu: Kenji Kazumura​, Mikel DeNicola&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;IBM: Dan Bandera​, Kevin Sutter&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Oracle: Bill Shannon​, Ed Bratt​, Dmitry Kornilov&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Payara: Steve Millidge​, Arjan Tijms&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Red Hat: Scott Stark, Mark Little&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Tomitribe: David Blevins​, Richard Monson-Haefel&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;PMC Representative: Ivar Grimstad&lt;br /&gt;
-&lt;/span&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;Elected Members: Alex Theedom, Werner Keil​ &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span style=&quot;font-weight: 400;&quot;&gt;I also wish to recognize Tanja Obradovic and Wayne Beaton from the Eclipse Foundation team who have driven the process throughout – many thanks to you both!&lt;/span&gt;&lt;/p&gt;</description>
-	<pubDate>Tue, 16 Oct 2018 19:18:07 +0000</pubDate>
-</item>
-<item>
-	<title>Eclipse Ditto: Example demonstrating connectivity to an MQTT broker</title>
-	<guid isPermaLink="true">https://www.eclipse.org/ditto/2018-10-16-example-mqtt-bidirectional.html</guid>
-	<link>https://www.eclipse.org/ditto/2018-10-16-example-mqtt-bidirectional.html</link>
-	<description>&lt;p&gt;Eclipse Ditto can now connect to MQTT 3.1.1 brokers.&lt;/p&gt;
-
-&lt;p&gt;Perfect timing to happily welcome a new colleague to our team behind Eclipse Ditto: &lt;a href=&quot;https://github.com/joosdavid&quot;&gt;David&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In order to get familiar with Ditto and the development with digital twins, David was assigned with one of his first 
-tasks to get his hands on one of our newest features, &lt;a href=&quot;https://www.eclipse.org/ditto/connectivity-protocol-bindings-mqtt.html&quot;&gt;MQTT connectivity&lt;/a&gt; 
-which was released recently with milestone &lt;a href=&quot;https://www.eclipse.org/ditto/2018-09-27-milestone-announcement-080-M2.html&quot;&gt;0.8.0-M2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;On his journey into digital twin land he made a great example with an ESP8266 powered board connected via an MQTT broker
-to Ditto and published it to the 
-&lt;a href=&quot;https://github.com/eclipse/ditto-examples/tree/master/mqtt-bidirectional&quot;&gt;Eclipse Ditto examples repository&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This example is about how to communicate between device and solution in a two way pattern through Ditto using MQTT. 
-  This means we will add a policy, a thing and a MQTT connection to Ditto. 
-  When Ditto ist set up and working, we will create real world device (“octopus board”) and connect it to it’s 
-  digital twin via MQTT.
-  &lt;br /&gt;&lt;br /&gt;
-  At the end, we will create a basic frontend webapp. 
-  The webapp will automatically connect to Ditto when you type in your credentials, automatically pull your things 
-  and show them in a list.
-  &lt;br /&gt;
-  You can create, modify and delete devices in the webapp and if there is a real world device connected to the thing 
-  in the list, you can send it a command message to control any feature on it. 
-  The list of things will always be up-to-date when you listen to server-sent-events, which you can activate easily 
-  with pressing a button.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;figure&gt;&lt;img alt=&quot;Eclipse Ditto bidirectional MQTT diagram&quot; class=&quot;docimage&quot; src=&quot;https://raw.githubusercontent.com/eclipse/ditto-examples/master/mqtt-bidirectional/img/diagram.jpg&quot; /&gt;Source: https://github.com/eclipse/ditto-examples&lt;/figure&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We will use an Octopus-board with an ESP8266 on it. It has several sensors built in, but for simplicity we will
- just use it’s temperature and altitude sensor. 
- &lt;br /&gt;
- To show the functionality of Eclipse Ditto messages, we will switch on/off a LED on the Octopus-board through it.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you have any wishes, improvements, are missing something
-or just want to get in touch with us, you can use one of
-our &lt;a href=&quot;https://eclipse.org/ditto/feedback.html&quot;&gt;feedback channels&lt;/a&gt;.&lt;/p&gt;
-
-&lt;figure&gt;&lt;img alt=&quot;Ditto&quot; class=&quot;docimage&quot; src=&quot;https://www.eclipse.org/ditto/images/ditto.svg&quot; /&gt;&lt;/figure&gt;
-
-&lt;p&gt;–&lt;br /&gt;
-The Eclipse Ditto team&lt;/p&gt;</description>
-	<pubDate>Tue, 16 Oct 2018 04:00:00 +0000</pubDate>
 </item>
 
 </channel>

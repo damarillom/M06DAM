@@ -43,18 +43,16 @@ public class JDBCExample {
 
 		if (connection != null) {
 			System.out.println("You made it, take control your database now!");
-			/**try {
+			try {
 				PreparedStatement preparedStatement = null;
-		         String sql = "CREATE TABLE prueba " +
-		            "(ID INT," +
-		            " NAME TEXT)";
-		         preparedStatement = connection.prepareStatement(sql);
-		         preparedStatement.executeUpdate();
+		        String sql = "CREATE TABLE prueba IF NOT EXISTS (ID INT, NAME TEXT)";
+		        preparedStatement = connection.prepareStatement(sql);
+		        preparedStatement.executeUpdate();
 		         
-		         System.out.println("table is create");
+		        System.out.println("table is create");
 			} catch (Exception e) {
 				// TODO: handle exception
-			}*/
+			}
 			
 			
 			
