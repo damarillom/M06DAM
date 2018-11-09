@@ -54,5 +54,10 @@ public class WorldReader extends DomReader {
 	}*/
 	
 	
+	public List<String> getListCountrys() {
+		return super.extractList("/world/country/@car_code");
+	}
+	
+	
 	
 }
